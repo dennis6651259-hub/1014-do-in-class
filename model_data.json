@@ -1,0 +1,4272 @@
+{
+  "summary": {
+    "dataset": "50 Startups",
+    "n_samples": 50,
+    "n_train": 40,
+    "n_test": 10,
+    "optimal_k": 2,
+    "sweet_spot_subset": [
+      "R&D Spend",
+      "Marketing Spend"
+    ],
+    "min_test_rmse": 8198.8,
+    "peak_test_r2": 0.9474,
+    "overfitting_k5_rmse": 9137.99,
+    "overfitting_penalty": 939.19,
+    "algorithms": [
+      "Lasso",
+      "Forward",
+      "RFE",
+      "ElasticNet",
+      "Exhaustive"
+    ]
+  },
+  "models": {
+    "Lasso": {
+      "name": "Lasso (L1 Ranking)",
+      "best_subset": [
+        "R&D Spend",
+        "Marketing Spend"
+      ],
+      "k_evaluations": [
+        {
+          "k": 1,
+          "subset": [
+            "R&D Spend"
+          ],
+          "rmse": 8274.87,
+          "mse": 68473473.52,
+          "r2": 0.9465,
+          "adj_r2": 0.9451,
+          "mae": 6077.36,
+          "equation": "Profit = $49,336.67 + 0.8536 × (R&D Spend)",
+          "beta_vector": [
+            49336.66803799111,
+            0.8536091075148805
+          ],
+          "coefficients": [
+            {
+              "predictor": "Intercept",
+              "beta": 49336.66803799111,
+              "std_error": 2985.818740367318,
+              "t_stat": 16.52366480623056,
+              "p_val": 0.0,
+              "ci_lower": 43292.19400549253,
+              "ci_upper": 55381.142070489695,
+              "vif": 1.0,
+              "significance": "***"
+            },
+            {
+              "predictor": "R&D Spend",
+              "beta": 0.8536091075148805,
+              "std_error": 0.032828607283217744,
+              "t_stat": 26.001989671710884,
+              "p_val": 0.0,
+              "ci_lower": 0.7871510665213766,
+              "ci_upper": 0.9200671485083844,
+              "vif": 1.0,
+              "significance": "***"
+            }
+          ],
+          "residuals": [
+            {
+              "test_id": 1,
+              "row_id": 13,
+              "actual": 134307.35,
+              "predicted": 127862.21,
+              "residual": 6445.14,
+              "abs_pct_err": 4.8,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 2,
+              "row_id": 39,
+              "actual": 81005.76,
+              "predicted": 82250.56,
+              "residual": -1244.8,
+              "abs_pct_err": 1.54,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 3,
+              "row_id": 30,
+              "actual": 99937.59,
+              "predicted": 102255.72,
+              "residual": -2318.13,
+              "abs_pct_err": 2.32,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 4,
+              "row_id": 45,
+              "actual": 64926.08,
+              "predicted": 50190.47,
+              "residual": 14735.61,
+              "abs_pct_err": 22.7,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 5,
+              "row_id": 17,
+              "actual": 125370.37,
+              "predicted": 130136.88,
+              "residual": -4766.51,
+              "abs_pct_err": 3.8,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 6,
+              "row_id": 48,
+              "actual": 35673.41,
+              "predicted": 49799.37,
+              "residual": -14125.96,
+              "abs_pct_err": 39.6,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 7,
+              "row_id": 26,
+              "actual": 105733.54,
+              "predicted": 113638.08,
+              "residual": -7904.54,
+              "abs_pct_err": 7.48,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 8,
+              "row_id": 25,
+              "actual": 107404.34,
+              "predicted": 104535.05,
+              "residual": 2869.29,
+              "abs_pct_err": 2.67,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 9,
+              "row_id": 32,
+              "actual": 97427.84,
+              "predicted": 103463.05,
+              "residual": -6035.21,
+              "abs_pct_err": 6.19,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 10,
+              "row_id": 19,
+              "actual": 122776.86,
+              "predicted": 123105.31,
+              "residual": -328.45,
+              "abs_pct_err": 0.27,
+              "is_outlier": false,
+              "status": "Normal"
+            }
+          ]
+        },
+        {
+          "k": 2,
+          "subset": [
+            "R&D Spend",
+            "Marketing Spend"
+          ],
+          "rmse": 8198.8,
+          "mse": 67220321.44,
+          "r2": 0.9474,
+          "adj_r2": 0.9446,
+          "mae": 6469.18,
+          "equation": "Profit = $45,542.39 + 0.7834 × (R&D Spend) + 0.0392 × (Marketing Spend)",
+          "beta_vector": [
+            45542.392477514215,
+            0.7833743148902919,
+            0.039239787145531495
+          ],
+          "coefficients": [
+            {
+              "predictor": "Intercept",
+              "beta": 45542.392477514215,
+              "std_error": 3457.276957071691,
+              "t_stat": 13.172908344632177,
+              "p_val": 1.5543122344752192e-15,
+              "ci_lower": 38537.28396449134,
+              "ci_upper": 52547.50099053709,
+              "vif": 1.0,
+              "significance": "***"
+            },
+            {
+              "predictor": "R&D Spend",
+              "beta": 0.7833743148902919,
+              "std_error": 0.04753512334486892,
+              "t_stat": 16.479904958000947,
+              "p_val": 0.0,
+              "ci_lower": 0.6870590062397594,
+              "ci_upper": 0.8796896235408244,
+              "vif": 2.257692691913017,
+              "significance": "***"
+            },
+            {
+              "predictor": "Marketing Spend",
+              "beta": 0.039239787145531495,
+              "std_error": 0.01982183326557591,
+              "t_stat": 1.979624519074039,
+              "p_val": 0.0552215041174795,
+              "ci_lower": -0.000923062020598088,
+              "ci_upper": 0.07940263631166108,
+              "vif": 2.2576926919130162,
+              "significance": "."
+            }
+          ],
+          "residuals": [
+            {
+              "test_id": 1,
+              "row_id": 13,
+              "actual": 134307.35,
+              "predicted": 127521.39,
+              "residual": 6785.96,
+              "abs_pct_err": 5.05,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 2,
+              "row_id": 39,
+              "actual": 81005.76,
+              "predicted": 82615.07,
+              "residual": -1609.31,
+              "abs_pct_err": 1.99,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 3,
+              "row_id": 30,
+              "actual": 99937.59,
+              "predicted": 97683.25,
+              "residual": 2254.34,
+              "abs_pct_err": 2.26,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 4,
+              "row_id": 45,
+              "actual": 64926.08,
+              "predicted": 46400.66,
+              "residual": 18525.42,
+              "abs_pct_err": 28.53,
+              "is_outlier": true,
+              "status": "Outlier"
+            },
+            {
+              "test_id": 5,
+              "row_id": 17,
+              "actual": 125370.37,
+              "predicted": 130782.54,
+              "residual": -5412.17,
+              "abs_pct_err": 4.32,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 6,
+              "row_id": 48,
+              "actual": 35673.41,
+              "predicted": 45967.02,
+              "residual": -10293.61,
+              "abs_pct_err": 28.86,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 7,
+              "row_id": 26,
+              "actual": 105733.54,
+              "predicted": 109813.19,
+              "residual": -4079.65,
+              "abs_pct_err": 3.86,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 8,
+              "row_id": 25,
+              "actual": 107404.34,
+              "predicted": 101612.69,
+              "residual": 5791.65,
+              "abs_pct_err": 5.39,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 9,
+              "row_id": 32,
+              "actual": 97427.84,
+              "predicted": 97023.64,
+              "residual": 404.2,
+              "abs_pct_err": 0.41,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 10,
+              "row_id": 19,
+              "actual": 122776.86,
+              "predicted": 113241.37,
+              "residual": 9535.49,
+              "abs_pct_err": 7.77,
+              "is_outlier": false,
+              "status": "Normal"
+            }
+          ]
+        },
+        {
+          "k": 3,
+          "subset": [
+            "R&D Spend",
+            "Marketing Spend",
+            "Administration"
+          ],
+          "rmse": 8309.06,
+          "mse": 69040478.08,
+          "r2": 0.9147,
+          "adj_r2": 0.9076,
+          "mae": 6979.15,
+          "equation": "Profit = $54,071.88 + 0.8038 × (R&D Spend) + 0.0312 × (Marketing Spend) - 0.0679 × (Administration)",
+          "beta_vector": [
+            54071.875745990874,
+            0.8037792756297525,
+            0.03124154589773315,
+            -0.06792917400149992
+          ],
+          "coefficients": [
+            {
+              "predictor": "Intercept",
+              "beta": 54071.875745990874,
+              "std_error": 8166.659953546586,
+              "t_stat": 6.621051452314816,
+              "p_val": 1.036675394416875e-07,
+              "ci_lower": 37509.12168615576,
+              "ci_upper": 70634.62980582599,
+              "vif": 1.0,
+              "significance": "***"
+            },
+            {
+              "predictor": "R&D Spend",
+              "beta": 0.8037792756297525,
+              "std_error": 0.0505342502335736,
+              "t_stat": 15.905633741761605,
+              "p_val": 0.0,
+              "ci_lower": 0.701291065886997,
+              "ci_upper": 0.906267485372508,
+              "vif": 2.574082735664086,
+              "significance": "***"
+            },
+            {
+              "predictor": "Marketing Spend",
+              "beta": 0.03124154589773315,
+              "std_error": 0.020921171917107736,
+              "t_stat": 1.4932980820346016,
+              "p_val": 0.1440725956699931,
+              "ci_lower": -0.011188557360833715,
+              "ci_upper": 0.07367164915630002,
+              "vif": 2.5372571088188764,
+              "significance": "ns"
+            },
+            {
+              "predictor": "Administration",
+              "beta": -0.06792917400149992,
+              "std_error": 0.058980242021117915,
+              "t_stat": -1.151727623924938,
+              "p_val": 0.25702465054166623,
+              "ci_lower": -0.18754664902090423,
+              "ci_upper": 0.05168830101790439,
+              "vif": 1.1520012494139669,
+              "significance": "ns"
+            }
+          ],
+          "residuals": [
+            {
+              "test_id": 1,
+              "row_id": 13,
+              "actual": 134307.35,
+              "predicted": 126703.03,
+              "residual": 7604.32,
+              "abs_pct_err": 5.66,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 2,
+              "row_id": 39,
+              "actual": 81005.76,
+              "predicted": 84894.75,
+              "residual": -3888.99,
+              "abs_pct_err": 4.8,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 3,
+              "row_id": 30,
+              "actual": 99937.59,
+              "predicted": 98893.42,
+              "residual": 1044.17,
+              "abs_pct_err": 1.04,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 4,
+              "row_id": 45,
+              "actual": 64926.08,
+              "predicted": 46501.71,
+              "residual": 18424.37,
+              "abs_pct_err": 28.38,
+              "is_outlier": true,
+              "status": "Outlier"
+            },
+            {
+              "test_id": 5,
+              "row_id": 17,
+              "actual": 125370.37,
+              "predicted": 129128.4,
+              "residual": -3758.03,
+              "abs_pct_err": 3.0,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 6,
+              "row_id": 48,
+              "actual": 35673.41,
+              "predicted": 50992.69,
+              "residual": -15319.28,
+              "abs_pct_err": 42.94,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 7,
+              "row_id": 26,
+              "actual": 105733.54,
+              "predicted": 109016.55,
+              "residual": -3283.01,
+              "abs_pct_err": 3.1,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 8,
+              "row_id": 25,
+              "actual": 107404.34,
+              "predicted": 100878.46,
+              "residual": 6525.88,
+              "abs_pct_err": 6.08,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 9,
+              "row_id": 32,
+              "actual": 97427.84,
+              "predicted": 97700.6,
+              "residual": -272.76,
+              "abs_pct_err": 0.28,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 10,
+              "row_id": 19,
+              "actual": 122776.86,
+              "predicted": 113106.15,
+              "residual": 9670.71,
+              "abs_pct_err": 7.88,
+              "is_outlier": false,
+              "status": "Normal"
+            }
+          ]
+        },
+        {
+          "k": 4,
+          "subset": [
+            "R&D Spend",
+            "Marketing Spend",
+            "Administration",
+            "State_Florida"
+          ],
+          "rmse": 8409.92,
+          "mse": 70726754.41,
+          "r2": 0.9127,
+          "adj_r2": 0.9027,
+          "mae": 6961.49,
+          "equation": "Profit = $54,029.89 + 0.8056 × (R&D Spend) + 0.0299 × (Marketing Spend) - 0.0688 × (Administration) + 935.0793 × (State_Florida)",
+          "beta_vector": [
+            54029.885919141954,
+            0.805632821897769,
+            0.02985972351662257,
+            -0.06878374611887908,
+            935.0793356301143
+          ],
+          "coefficients": [
+            {
+              "predictor": "Intercept",
+              "beta": 54029.885919141954,
+              "std_error": 8274.043244067161,
+              "t_stat": 6.530046354046272,
+              "p_val": 1.5570611311410687e-07,
+              "ci_lower": 37232.685130675025,
+              "ci_upper": 70827.08670760889,
+              "vif": 1.0,
+              "significance": "***"
+            },
+            {
+              "predictor": "R&D Spend",
+              "beta": 0.805632821897769,
+              "std_error": 0.05159556253303902,
+              "t_stat": 15.614381980657447,
+              "p_val": 0.0,
+              "ci_lower": 0.7008882613369101,
+              "ci_upper": 0.9103773824586279,
+              "vif": 2.614956161907153,
+              "significance": "***"
+            },
+            {
+              "predictor": "Marketing Spend",
+              "beta": 0.02985972351662257,
+              "std_error": 0.021731713815846966,
+              "t_stat": 1.3740160472225886,
+              "p_val": 0.17817276473785082,
+              "ci_lower": -0.01425800099539587,
+              "ci_upper": 0.07397744802864101,
+              "vif": 2.667898335816746,
+              "significance": "ns"
+            },
+            {
+              "predictor": "Administration",
+              "beta": -0.06878374611887908,
+              "std_error": 0.059820426355172276,
+              "t_stat": -1.149837109325982,
+              "p_val": 0.2580073992585119,
+              "ci_lower": -0.19022566793383008,
+              "ci_upper": 0.052658175696071924,
+              "vif": 1.154855687546819,
+              "significance": "ns"
+            },
+            {
+              "predictor": "State_Florida",
+              "beta": 935.0793356301143,
+              "std_error": 3254.2109708195844,
+              "t_stat": 0.28734441129199784,
+              "p_val": 0.7755430897335789,
+              "ci_lower": -5671.320156429969,
+              "ci_upper": 7541.478827690198,
+              "vif": 1.057991466776138,
+              "significance": "ns"
+            }
+          ],
+          "residuals": [
+            {
+              "test_id": 1,
+              "row_id": 13,
+              "actual": 134307.35,
+              "predicted": 126366.62,
+              "residual": 7940.73,
+              "abs_pct_err": 5.91,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 2,
+              "row_id": 39,
+              "actual": 81005.76,
+              "predicted": 84611.5,
+              "residual": -3605.74,
+              "abs_pct_err": 4.45,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 3,
+              "row_id": 30,
+              "actual": 99937.59,
+              "predicted": 99676.67,
+              "residual": 260.92,
+              "abs_pct_err": 0.26,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 4,
+              "row_id": 45,
+              "actual": 64926.08,
+              "predicted": 46352.84,
+              "residual": 18573.24,
+              "abs_pct_err": 28.61,
+              "is_outlier": true,
+              "status": "Outlier"
+            },
+            {
+              "test_id": 5,
+              "row_id": 17,
+              "actual": 125370.37,
+              "predicted": 128747.41,
+              "residual": -3377.04,
+              "abs_pct_err": 2.69,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 6,
+              "row_id": 48,
+              "actual": 35673.41,
+              "predicted": 50907.49,
+              "residual": -15234.08,
+              "abs_pct_err": 42.7,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 7,
+              "row_id": 26,
+              "actual": 105733.54,
+              "predicted": 109740.86,
+              "residual": -4007.32,
+              "abs_pct_err": 3.79,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 8,
+              "row_id": 25,
+              "actual": 107404.34,
+              "predicted": 100646.44,
+              "residual": 6757.9,
+              "abs_pct_err": 6.29,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 9,
+              "row_id": 32,
+              "actual": 97427.84,
+              "predicted": 97602.03,
+              "residual": -174.19,
+              "abs_pct_err": 0.18,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 10,
+              "row_id": 19,
+              "actual": 122776.86,
+              "predicted": 113093.16,
+              "residual": 9683.7,
+              "abs_pct_err": 7.89,
+              "is_outlier": false,
+              "status": "Normal"
+            }
+          ]
+        },
+        {
+          "k": 5,
+          "subset": [
+            "R&D Spend",
+            "Administration",
+            "Marketing Spend",
+            "State_Florida",
+            "State_New York"
+          ],
+          "rmse": 9137.99,
+          "mse": 83502861.24,
+          "r2": 0.9347,
+          "adj_r2": 0.9251,
+          "mae": 6961.48,
+          "equation": "Profit = $54,028.04 + 0.8056 × (R&D Spend) - 0.0688 × (Administration) + 0.0299 × (Marketing Spend) + 938.7930 × (State_Florida) + 6.9878 × (State_New York)",
+          "beta_vector": [
+            54028.039594058704,
+            0.8056300637569415,
+            -0.06878788228413198,
+            0.02985544291038674,
+            938.7930061484234,
+            6.987759966985652
+          ],
+          "coefficients": [
+            {
+              "predictor": "Intercept",
+              "beta": 54028.039594058704,
+              "std_error": 8457.293260974295,
+              "t_stat": 6.388337015977448,
+              "p_val": 2.7088902365690615e-07,
+              "ci_lower": 36840.751800753955,
+              "ci_upper": 71215.32738736345,
+              "vif": 1.0,
+              "significance": "***"
+            },
+            {
+              "predictor": "R&D Spend",
+              "beta": 0.8056300637569415,
+              "std_error": 0.0523712487634118,
+              "t_stat": 15.383060033500287,
+              "p_val": 0.0,
+              "ci_lower": 0.6991988810113855,
+              "ci_upper": 0.9120612465024974,
+              "vif": 2.6171974116238235,
+              "significance": "***"
+            },
+            {
+              "predictor": "Administration",
+              "beta": -0.06878788228413198,
+              "std_error": 0.06073725885729177,
+              "t_stat": -1.1325483497000737,
+              "p_val": 0.26532799260438655,
+              "ci_lower": -0.19222084310787213,
+              "ci_upper": 0.05464507853960816,
+              "vif": 1.1565116160578504,
+              "significance": "ns"
+            },
+            {
+              "predictor": "Marketing Spend",
+              "beta": 0.02985544291038674,
+              "std_error": 0.02217690135536517,
+              "t_stat": 1.34624050637101,
+              "p_val": 0.18713248451717002,
+              "ci_lower": -0.015213443102734786,
+              "ci_upper": 0.07492432892350827,
+              "vif": 2.698944569752321,
+              "significance": "ns"
+            },
+            {
+              "predictor": "State_Florida",
+              "beta": 938.7930061484234,
+              "std_error": 3893.5108845973637,
+              "t_stat": 0.2411173447240808,
+              "p_val": 0.8109123470728932,
+              "ci_lower": -6973.7731110433415,
+              "ci_upper": 8851.359123340188,
+              "vif": 1.4712431557726304,
+              "significance": "ns"
+            },
+            {
+              "predictor": "State_New York",
+              "beta": 6.987759966985652,
+              "std_error": 3882.7648770093274,
+              "t_stat": 0.0017996866120742097,
+              "p_val": 0.9985745767960659,
+              "ci_lower": -7883.739842306905,
+              "ci_upper": 7897.715362240876,
+              "vif": 1.410878407198013,
+              "significance": "ns"
+            }
+          ],
+          "residuals": [
+            {
+              "test_id": 1,
+              "row_id": 13,
+              "actual": 134307.35,
+              "predicted": 126362.88,
+              "residual": 7944.47,
+              "abs_pct_err": 5.92,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 2,
+              "row_id": 39,
+              "actual": 81005.76,
+              "predicted": 84608.45,
+              "residual": -3602.69,
+              "abs_pct_err": 4.45,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 3,
+              "row_id": 30,
+              "actual": 99937.59,
+              "predicted": 99677.49,
+              "residual": 260.1,
+              "abs_pct_err": 0.26,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 4,
+              "row_id": 45,
+              "actual": 64926.08,
+              "predicted": 46357.46,
+              "residual": 18568.62,
+              "abs_pct_err": 28.6,
+              "is_outlier": true,
+              "status": "Outlier"
+            },
+            {
+              "test_id": 5,
+              "row_id": 17,
+              "actual": 125370.37,
+              "predicted": 128750.48,
+              "residual": -3380.11,
+              "abs_pct_err": 2.7,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 6,
+              "row_id": 48,
+              "actual": 35673.41,
+              "predicted": 50912.42,
+              "residual": -15239.01,
+              "abs_pct_err": 42.72,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 7,
+              "row_id": 26,
+              "actual": 105733.54,
+              "predicted": 109741.35,
+              "residual": -4007.81,
+              "abs_pct_err": 3.79,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 8,
+              "row_id": 25,
+              "actual": 107404.34,
+              "predicted": 100643.24,
+              "residual": 6761.1,
+              "abs_pct_err": 6.29,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 9,
+              "row_id": 32,
+              "actual": 97427.84,
+              "predicted": 97599.28,
+              "residual": -171.44,
+              "abs_pct_err": 0.18,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 10,
+              "row_id": 19,
+              "actual": 122776.86,
+              "predicted": 113097.43,
+              "residual": 9679.43,
+              "abs_pct_err": 7.88,
+              "is_outlier": false,
+              "status": "Normal"
+            }
+          ]
+        }
+      ]
+    },
+    "Forward": {
+      "name": "Forward SFS",
+      "best_subset": [
+        "R&D Spend",
+        "Marketing Spend"
+      ],
+      "k_evaluations": [
+        {
+          "k": 1,
+          "subset": [
+            "R&D Spend"
+          ],
+          "rmse": 8274.87,
+          "mse": 68473473.52,
+          "r2": 0.9465,
+          "adj_r2": 0.9451,
+          "mae": 6077.36,
+          "equation": "Profit = $49,336.67 + 0.8536 × (R&D Spend)",
+          "beta_vector": [
+            49336.66803799111,
+            0.8536091075148805
+          ],
+          "coefficients": [
+            {
+              "predictor": "Intercept",
+              "beta": 49336.66803799111,
+              "std_error": 2985.818740367318,
+              "t_stat": 16.52366480623056,
+              "p_val": 0.0,
+              "ci_lower": 43292.19400549253,
+              "ci_upper": 55381.142070489695,
+              "vif": 1.0,
+              "significance": "***"
+            },
+            {
+              "predictor": "R&D Spend",
+              "beta": 0.8536091075148805,
+              "std_error": 0.032828607283217744,
+              "t_stat": 26.001989671710884,
+              "p_val": 0.0,
+              "ci_lower": 0.7871510665213766,
+              "ci_upper": 0.9200671485083844,
+              "vif": 1.0,
+              "significance": "***"
+            }
+          ],
+          "residuals": [
+            {
+              "test_id": 1,
+              "row_id": 13,
+              "actual": 134307.35,
+              "predicted": 127862.21,
+              "residual": 6445.14,
+              "abs_pct_err": 4.8,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 2,
+              "row_id": 39,
+              "actual": 81005.76,
+              "predicted": 82250.56,
+              "residual": -1244.8,
+              "abs_pct_err": 1.54,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 3,
+              "row_id": 30,
+              "actual": 99937.59,
+              "predicted": 102255.72,
+              "residual": -2318.13,
+              "abs_pct_err": 2.32,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 4,
+              "row_id": 45,
+              "actual": 64926.08,
+              "predicted": 50190.47,
+              "residual": 14735.61,
+              "abs_pct_err": 22.7,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 5,
+              "row_id": 17,
+              "actual": 125370.37,
+              "predicted": 130136.88,
+              "residual": -4766.51,
+              "abs_pct_err": 3.8,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 6,
+              "row_id": 48,
+              "actual": 35673.41,
+              "predicted": 49799.37,
+              "residual": -14125.96,
+              "abs_pct_err": 39.6,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 7,
+              "row_id": 26,
+              "actual": 105733.54,
+              "predicted": 113638.08,
+              "residual": -7904.54,
+              "abs_pct_err": 7.48,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 8,
+              "row_id": 25,
+              "actual": 107404.34,
+              "predicted": 104535.05,
+              "residual": 2869.29,
+              "abs_pct_err": 2.67,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 9,
+              "row_id": 32,
+              "actual": 97427.84,
+              "predicted": 103463.05,
+              "residual": -6035.21,
+              "abs_pct_err": 6.19,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 10,
+              "row_id": 19,
+              "actual": 122776.86,
+              "predicted": 123105.31,
+              "residual": -328.45,
+              "abs_pct_err": 0.27,
+              "is_outlier": false,
+              "status": "Normal"
+            }
+          ]
+        },
+        {
+          "k": 2,
+          "subset": [
+            "R&D Spend",
+            "Marketing Spend"
+          ],
+          "rmse": 8198.8,
+          "mse": 67220321.44,
+          "r2": 0.9474,
+          "adj_r2": 0.9446,
+          "mae": 6469.18,
+          "equation": "Profit = $45,542.39 + 0.7834 × (R&D Spend) + 0.0392 × (Marketing Spend)",
+          "beta_vector": [
+            45542.392477514215,
+            0.7833743148902919,
+            0.039239787145531495
+          ],
+          "coefficients": [
+            {
+              "predictor": "Intercept",
+              "beta": 45542.392477514215,
+              "std_error": 3457.276957071691,
+              "t_stat": 13.172908344632177,
+              "p_val": 1.5543122344752192e-15,
+              "ci_lower": 38537.28396449134,
+              "ci_upper": 52547.50099053709,
+              "vif": 1.0,
+              "significance": "***"
+            },
+            {
+              "predictor": "R&D Spend",
+              "beta": 0.7833743148902919,
+              "std_error": 0.04753512334486892,
+              "t_stat": 16.479904958000947,
+              "p_val": 0.0,
+              "ci_lower": 0.6870590062397594,
+              "ci_upper": 0.8796896235408244,
+              "vif": 2.257692691913017,
+              "significance": "***"
+            },
+            {
+              "predictor": "Marketing Spend",
+              "beta": 0.039239787145531495,
+              "std_error": 0.01982183326557591,
+              "t_stat": 1.979624519074039,
+              "p_val": 0.0552215041174795,
+              "ci_lower": -0.000923062020598088,
+              "ci_upper": 0.07940263631166108,
+              "vif": 2.2576926919130162,
+              "significance": "."
+            }
+          ],
+          "residuals": [
+            {
+              "test_id": 1,
+              "row_id": 13,
+              "actual": 134307.35,
+              "predicted": 127521.39,
+              "residual": 6785.96,
+              "abs_pct_err": 5.05,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 2,
+              "row_id": 39,
+              "actual": 81005.76,
+              "predicted": 82615.07,
+              "residual": -1609.31,
+              "abs_pct_err": 1.99,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 3,
+              "row_id": 30,
+              "actual": 99937.59,
+              "predicted": 97683.25,
+              "residual": 2254.34,
+              "abs_pct_err": 2.26,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 4,
+              "row_id": 45,
+              "actual": 64926.08,
+              "predicted": 46400.66,
+              "residual": 18525.42,
+              "abs_pct_err": 28.53,
+              "is_outlier": true,
+              "status": "Outlier"
+            },
+            {
+              "test_id": 5,
+              "row_id": 17,
+              "actual": 125370.37,
+              "predicted": 130782.54,
+              "residual": -5412.17,
+              "abs_pct_err": 4.32,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 6,
+              "row_id": 48,
+              "actual": 35673.41,
+              "predicted": 45967.02,
+              "residual": -10293.61,
+              "abs_pct_err": 28.86,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 7,
+              "row_id": 26,
+              "actual": 105733.54,
+              "predicted": 109813.19,
+              "residual": -4079.65,
+              "abs_pct_err": 3.86,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 8,
+              "row_id": 25,
+              "actual": 107404.34,
+              "predicted": 101612.69,
+              "residual": 5791.65,
+              "abs_pct_err": 5.39,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 9,
+              "row_id": 32,
+              "actual": 97427.84,
+              "predicted": 97023.64,
+              "residual": 404.2,
+              "abs_pct_err": 0.41,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 10,
+              "row_id": 19,
+              "actual": 122776.86,
+              "predicted": 113241.37,
+              "residual": 9535.49,
+              "abs_pct_err": 7.77,
+              "is_outlier": false,
+              "status": "Normal"
+            }
+          ]
+        },
+        {
+          "k": 3,
+          "subset": [
+            "R&D Spend",
+            "Marketing Spend",
+            "State_Florida"
+          ],
+          "rmse": 8803.78,
+          "mse": 77506542.29,
+          "r2": 0.9043,
+          "adj_r2": 0.8963,
+          "mae": 6466.23,
+          "equation": "Profit = $45,422.80 + 0.7847 × (R&D Spend) + 0.0382 × (Marketing Spend) + 749.0513 × (State_Florida)",
+          "beta_vector": [
+            45422.799865294684,
+            0.7846534776655107,
+            0.03821347229503255,
+            749.051263889148
+          ],
+          "coefficients": [
+            {
+              "predictor": "Intercept",
+              "beta": 45422.799865294684,
+              "std_error": 3540.9794931138586,
+              "t_stat": 12.82775004871629,
+              "p_val": 5.551115123125783e-15,
+              "ci_lower": 38241.36059771567,
+              "ci_upper": 52604.2391328737,
+              "vif": 1.0,
+              "significance": "***"
+            },
+            {
+              "predictor": "R&D Spend",
+              "beta": 0.7846534776655107,
+              "std_error": 0.04847726920868728,
+              "t_stat": 16.186008215266764,
+              "p_val": 0.0,
+              "ci_lower": 0.6863370187994577,
+              "ci_upper": 0.8829699365315637,
+              "vif": 2.2879538046988945,
+              "significance": "***"
+            },
+            {
+              "predictor": "Marketing Spend",
+              "beta": 0.03821347229503255,
+              "std_error": 0.020572758157558123,
+              "t_stat": 1.8574792938492546,
+              "p_val": 0.07143811599557104,
+              "ci_lower": -0.0035100151079326958,
+              "ci_upper": 0.0799369596979978,
+              "vif": 2.369723149064907,
+              "significance": "."
+            },
+            {
+              "predictor": "State_Florida",
+              "beta": 749.051263889148,
+              "std_error": 3264.6956259991607,
+              "t_stat": 0.22943984668092932,
+              "p_val": 0.8198256709205398,
+              "ci_lower": -5872.0583502268655,
+              "ci_upper": 7370.160878005161,
+              "vif": 1.0553764463718027,
+              "significance": "ns"
+            }
+          ],
+          "residuals": [
+            {
+              "test_id": 1,
+              "row_id": 13,
+              "actual": 134307.35,
+              "predicted": 127260.15,
+              "residual": 7047.2,
+              "abs_pct_err": 5.25,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 2,
+              "row_id": 39,
+              "actual": 81005.76,
+              "predicted": 82365.2,
+              "residual": -1359.44,
+              "abs_pct_err": 1.68,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 3,
+              "row_id": 30,
+              "actual": 99937.59,
+              "predicted": 98298.48,
+              "residual": 1639.11,
+              "abs_pct_err": 1.64,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 4,
+              "row_id": 45,
+              "actual": 64926.08,
+              "predicted": 46280.39,
+              "residual": 18645.69,
+              "abs_pct_err": 28.72,
+              "is_outlier": true,
+              "status": "Outlier"
+            },
+            {
+              "test_id": 5,
+              "row_id": 17,
+              "actual": 125370.37,
+              "predicted": 130494.02,
+              "residual": -5123.65,
+              "abs_pct_err": 4.09,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 6,
+              "row_id": 48,
+              "actual": 35673.41,
+              "predicted": 45848.12,
+              "residual": -10174.71,
+              "abs_pct_err": 28.52,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 7,
+              "row_id": 26,
+              "actual": 105733.54,
+              "predicted": 110401.43,
+              "residual": -4667.89,
+              "abs_pct_err": 4.41,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 8,
+              "row_id": 25,
+              "actual": 107404.34,
+              "predicted": 101434.22,
+              "residual": 5970.12,
+              "abs_pct_err": 5.56,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 9,
+              "row_id": 32,
+              "actual": 97427.84,
+              "predicted": 96937.86,
+              "residual": 489.98,
+              "abs_pct_err": 0.5,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 10,
+              "row_id": 19,
+              "actual": 122776.86,
+              "predicted": 113232.32,
+              "residual": 9544.54,
+              "abs_pct_err": 7.77,
+              "is_outlier": false,
+              "status": "Normal"
+            }
+          ]
+        },
+        {
+          "k": 4,
+          "subset": [
+            "R&D Spend",
+            "Marketing Spend",
+            "State_Florida",
+            "State_New York"
+          ],
+          "rmse": 8997.2,
+          "mse": 80949607.84,
+          "r2": 0.9,
+          "adj_r2": 0.8886,
+          "mae": 6454.51,
+          "equation": "Profit = $45,476.73 + 0.7847 × (R&D Spend) + 0.0383 × (Marketing Spend) + 664.5882 × (State_Florida) - 159.4085 × (State_New York)",
+          "beta_vector": [
+            45476.7262833778,
+            0.7847451770125891,
+            0.03829966423402536,
+            664.5882100113106,
+            -159.4085290999358
+          ],
+          "coefficients": [
+            {
+              "predictor": "Intercept",
+              "beta": 45476.7262833778,
+              "std_error": 3825.2969315359273,
+              "t_stat": 11.888417316957943,
+              "p_val": 7.638334409421077e-14,
+              "ci_lower": 37710.96065475501,
+              "ci_upper": 53242.491912000594,
+              "vif": 1.0,
+              "significance": "***"
+            },
+            {
+              "predictor": "R&D Spend",
+              "beta": 0.7847451770125891,
+              "std_error": 0.049214794446026014,
+              "t_stat": 15.945310467022697,
+              "p_val": 0.0,
+              "ci_lower": 0.6848338326205007,
+              "ci_upper": 0.8846565214046774,
+              "vif": 2.292707374813337,
+              "significance": "***"
+            },
+            {
+              "predictor": "Marketing Spend",
+              "beta": 0.03829966423402536,
+              "std_error": 0.020970140963417528,
+              "t_stat": 1.8263904043773114,
+              "p_val": 0.07633141030634727,
+              "ci_lower": -0.004271985192335848,
+              "ci_upper": 0.08087131366038657,
+              "vif": 2.393875662475562,
+              "significance": "."
+            },
+            {
+              "predictor": "State_Florida",
+              "beta": 664.5882100113106,
+              "std_error": 3901.63617839157,
+              "t_stat": 0.17033577187232352,
+              "p_val": 0.865726922386606,
+              "ci_lower": -7256.154328889785,
+              "ci_upper": 8585.330748912405,
+              "vif": 1.4655541253123714,
+              "significance": "ns"
+            },
+            {
+              "predictor": "State_New York",
+              "beta": -159.4085290999358,
+              "std_error": 3895.6203397766776,
+              "t_stat": -0.04091993448957969,
+              "p_val": 0.967592266218873,
+              "ci_lower": -8067.938266333864,
+              "ci_upper": 7749.121208133993,
+              "vif": 1.4088582685780118,
+              "significance": "ns"
+            }
+          ],
+          "residuals": [
+            {
+              "test_id": 1,
+              "row_id": 13,
+              "actual": 134307.35,
+              "predicted": 127344.29,
+              "residual": 6963.06,
+              "abs_pct_err": 5.18,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 2,
+              "row_id": 39,
+              "actual": 81005.76,
+              "predicted": 82437.75,
+              "residual": -1431.99,
+              "abs_pct_err": 1.77,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 3,
+              "row_id": 30,
+              "actual": 99937.59,
+              "predicted": 98281.48,
+              "residual": 1656.11,
+              "abs_pct_err": 1.66,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 4,
+              "row_id": 45,
+              "actual": 64926.08,
+              "predicted": 46175.16,
+              "residual": 18750.92,
+              "abs_pct_err": 28.88,
+              "is_outlier": true,
+              "status": "Outlier"
+            },
+            {
+              "test_id": 5,
+              "row_id": 17,
+              "actual": 125370.37,
+              "predicted": 130421.57,
+              "residual": -5051.2,
+              "abs_pct_err": 4.03,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 6,
+              "row_id": 48,
+              "actual": 35673.41,
+              "predicted": 45742.69,
+              "residual": -10069.28,
+              "abs_pct_err": 28.23,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 7,
+              "row_id": 26,
+              "actual": 105733.54,
+              "predicted": 110389.35,
+              "residual": -4655.81,
+              "abs_pct_err": 4.4,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 8,
+              "row_id": 25,
+              "actual": 107404.34,
+              "predicted": 101505.97,
+              "residual": 5898.37,
+              "abs_pct_err": 5.49,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 9,
+              "row_id": 32,
+              "actual": 97427.84,
+              "predicted": 97001.57,
+              "residual": 426.27,
+              "abs_pct_err": 0.44,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 10,
+              "row_id": 19,
+              "actual": 122776.86,
+              "predicted": 113134.76,
+              "residual": 9642.1,
+              "abs_pct_err": 7.85,
+              "is_outlier": false,
+              "status": "Normal"
+            }
+          ]
+        },
+        {
+          "k": 5,
+          "subset": [
+            "R&D Spend",
+            "Administration",
+            "Marketing Spend",
+            "State_Florida",
+            "State_New York"
+          ],
+          "rmse": 9137.99,
+          "mse": 83502861.24,
+          "r2": 0.9347,
+          "adj_r2": 0.9251,
+          "mae": 6961.48,
+          "equation": "Profit = $54,028.04 + 0.8056 × (R&D Spend) - 0.0688 × (Administration) + 0.0299 × (Marketing Spend) + 938.7930 × (State_Florida) + 6.9878 × (State_New York)",
+          "beta_vector": [
+            54028.039594058704,
+            0.8056300637569415,
+            -0.06878788228413198,
+            0.02985544291038674,
+            938.7930061484234,
+            6.987759966985652
+          ],
+          "coefficients": [
+            {
+              "predictor": "Intercept",
+              "beta": 54028.039594058704,
+              "std_error": 8457.293260974295,
+              "t_stat": 6.388337015977448,
+              "p_val": 2.7088902365690615e-07,
+              "ci_lower": 36840.751800753955,
+              "ci_upper": 71215.32738736345,
+              "vif": 1.0,
+              "significance": "***"
+            },
+            {
+              "predictor": "R&D Spend",
+              "beta": 0.8056300637569415,
+              "std_error": 0.0523712487634118,
+              "t_stat": 15.383060033500287,
+              "p_val": 0.0,
+              "ci_lower": 0.6991988810113855,
+              "ci_upper": 0.9120612465024974,
+              "vif": 2.6171974116238235,
+              "significance": "***"
+            },
+            {
+              "predictor": "Administration",
+              "beta": -0.06878788228413198,
+              "std_error": 0.06073725885729177,
+              "t_stat": -1.1325483497000737,
+              "p_val": 0.26532799260438655,
+              "ci_lower": -0.19222084310787213,
+              "ci_upper": 0.05464507853960816,
+              "vif": 1.1565116160578504,
+              "significance": "ns"
+            },
+            {
+              "predictor": "Marketing Spend",
+              "beta": 0.02985544291038674,
+              "std_error": 0.02217690135536517,
+              "t_stat": 1.34624050637101,
+              "p_val": 0.18713248451717002,
+              "ci_lower": -0.015213443102734786,
+              "ci_upper": 0.07492432892350827,
+              "vif": 2.698944569752321,
+              "significance": "ns"
+            },
+            {
+              "predictor": "State_Florida",
+              "beta": 938.7930061484234,
+              "std_error": 3893.5108845973637,
+              "t_stat": 0.2411173447240808,
+              "p_val": 0.8109123470728932,
+              "ci_lower": -6973.7731110433415,
+              "ci_upper": 8851.359123340188,
+              "vif": 1.4712431557726304,
+              "significance": "ns"
+            },
+            {
+              "predictor": "State_New York",
+              "beta": 6.987759966985652,
+              "std_error": 3882.7648770093274,
+              "t_stat": 0.0017996866120742097,
+              "p_val": 0.9985745767960659,
+              "ci_lower": -7883.739842306905,
+              "ci_upper": 7897.715362240876,
+              "vif": 1.410878407198013,
+              "significance": "ns"
+            }
+          ],
+          "residuals": [
+            {
+              "test_id": 1,
+              "row_id": 13,
+              "actual": 134307.35,
+              "predicted": 126362.88,
+              "residual": 7944.47,
+              "abs_pct_err": 5.92,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 2,
+              "row_id": 39,
+              "actual": 81005.76,
+              "predicted": 84608.45,
+              "residual": -3602.69,
+              "abs_pct_err": 4.45,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 3,
+              "row_id": 30,
+              "actual": 99937.59,
+              "predicted": 99677.49,
+              "residual": 260.1,
+              "abs_pct_err": 0.26,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 4,
+              "row_id": 45,
+              "actual": 64926.08,
+              "predicted": 46357.46,
+              "residual": 18568.62,
+              "abs_pct_err": 28.6,
+              "is_outlier": true,
+              "status": "Outlier"
+            },
+            {
+              "test_id": 5,
+              "row_id": 17,
+              "actual": 125370.37,
+              "predicted": 128750.48,
+              "residual": -3380.11,
+              "abs_pct_err": 2.7,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 6,
+              "row_id": 48,
+              "actual": 35673.41,
+              "predicted": 50912.42,
+              "residual": -15239.01,
+              "abs_pct_err": 42.72,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 7,
+              "row_id": 26,
+              "actual": 105733.54,
+              "predicted": 109741.35,
+              "residual": -4007.81,
+              "abs_pct_err": 3.79,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 8,
+              "row_id": 25,
+              "actual": 107404.34,
+              "predicted": 100643.24,
+              "residual": 6761.1,
+              "abs_pct_err": 6.29,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 9,
+              "row_id": 32,
+              "actual": 97427.84,
+              "predicted": 97599.28,
+              "residual": -171.44,
+              "abs_pct_err": 0.18,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 10,
+              "row_id": 19,
+              "actual": 122776.86,
+              "predicted": 113097.43,
+              "residual": 9679.43,
+              "abs_pct_err": 7.88,
+              "is_outlier": false,
+              "status": "Normal"
+            }
+          ]
+        }
+      ]
+    },
+    "RFE": {
+      "name": "RFE",
+      "best_subset": [
+        "R&D Spend",
+        "Marketing Spend"
+      ],
+      "k_evaluations": [
+        {
+          "k": 1,
+          "subset": [
+            "R&D Spend"
+          ],
+          "rmse": 8274.87,
+          "mse": 68473473.52,
+          "r2": 0.9465,
+          "adj_r2": 0.9451,
+          "mae": 6077.36,
+          "equation": "Profit = $49,336.67 + 0.8536 × (R&D Spend)",
+          "beta_vector": [
+            49336.66803799111,
+            0.8536091075148805
+          ],
+          "coefficients": [
+            {
+              "predictor": "Intercept",
+              "beta": 49336.66803799111,
+              "std_error": 2985.818740367318,
+              "t_stat": 16.52366480623056,
+              "p_val": 0.0,
+              "ci_lower": 43292.19400549253,
+              "ci_upper": 55381.142070489695,
+              "vif": 1.0,
+              "significance": "***"
+            },
+            {
+              "predictor": "R&D Spend",
+              "beta": 0.8536091075148805,
+              "std_error": 0.032828607283217744,
+              "t_stat": 26.001989671710884,
+              "p_val": 0.0,
+              "ci_lower": 0.7871510665213766,
+              "ci_upper": 0.9200671485083844,
+              "vif": 1.0,
+              "significance": "***"
+            }
+          ],
+          "residuals": [
+            {
+              "test_id": 1,
+              "row_id": 13,
+              "actual": 134307.35,
+              "predicted": 127862.21,
+              "residual": 6445.14,
+              "abs_pct_err": 4.8,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 2,
+              "row_id": 39,
+              "actual": 81005.76,
+              "predicted": 82250.56,
+              "residual": -1244.8,
+              "abs_pct_err": 1.54,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 3,
+              "row_id": 30,
+              "actual": 99937.59,
+              "predicted": 102255.72,
+              "residual": -2318.13,
+              "abs_pct_err": 2.32,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 4,
+              "row_id": 45,
+              "actual": 64926.08,
+              "predicted": 50190.47,
+              "residual": 14735.61,
+              "abs_pct_err": 22.7,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 5,
+              "row_id": 17,
+              "actual": 125370.37,
+              "predicted": 130136.88,
+              "residual": -4766.51,
+              "abs_pct_err": 3.8,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 6,
+              "row_id": 48,
+              "actual": 35673.41,
+              "predicted": 49799.37,
+              "residual": -14125.96,
+              "abs_pct_err": 39.6,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 7,
+              "row_id": 26,
+              "actual": 105733.54,
+              "predicted": 113638.08,
+              "residual": -7904.54,
+              "abs_pct_err": 7.48,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 8,
+              "row_id": 25,
+              "actual": 107404.34,
+              "predicted": 104535.05,
+              "residual": 2869.29,
+              "abs_pct_err": 2.67,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 9,
+              "row_id": 32,
+              "actual": 97427.84,
+              "predicted": 103463.05,
+              "residual": -6035.21,
+              "abs_pct_err": 6.19,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 10,
+              "row_id": 19,
+              "actual": 122776.86,
+              "predicted": 123105.31,
+              "residual": -328.45,
+              "abs_pct_err": 0.27,
+              "is_outlier": false,
+              "status": "Normal"
+            }
+          ]
+        },
+        {
+          "k": 2,
+          "subset": [
+            "R&D Spend",
+            "Marketing Spend"
+          ],
+          "rmse": 8198.8,
+          "mse": 67220321.44,
+          "r2": 0.9474,
+          "adj_r2": 0.9446,
+          "mae": 6469.18,
+          "equation": "Profit = $45,542.39 + 0.7834 × (R&D Spend) + 0.0392 × (Marketing Spend)",
+          "beta_vector": [
+            45542.392477514215,
+            0.7833743148902919,
+            0.039239787145531495
+          ],
+          "coefficients": [
+            {
+              "predictor": "Intercept",
+              "beta": 45542.392477514215,
+              "std_error": 3457.276957071691,
+              "t_stat": 13.172908344632177,
+              "p_val": 1.5543122344752192e-15,
+              "ci_lower": 38537.28396449134,
+              "ci_upper": 52547.50099053709,
+              "vif": 1.0,
+              "significance": "***"
+            },
+            {
+              "predictor": "R&D Spend",
+              "beta": 0.7833743148902919,
+              "std_error": 0.04753512334486892,
+              "t_stat": 16.479904958000947,
+              "p_val": 0.0,
+              "ci_lower": 0.6870590062397594,
+              "ci_upper": 0.8796896235408244,
+              "vif": 2.257692691913017,
+              "significance": "***"
+            },
+            {
+              "predictor": "Marketing Spend",
+              "beta": 0.039239787145531495,
+              "std_error": 0.01982183326557591,
+              "t_stat": 1.979624519074039,
+              "p_val": 0.0552215041174795,
+              "ci_lower": -0.000923062020598088,
+              "ci_upper": 0.07940263631166108,
+              "vif": 2.2576926919130162,
+              "significance": "."
+            }
+          ],
+          "residuals": [
+            {
+              "test_id": 1,
+              "row_id": 13,
+              "actual": 134307.35,
+              "predicted": 127521.39,
+              "residual": 6785.96,
+              "abs_pct_err": 5.05,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 2,
+              "row_id": 39,
+              "actual": 81005.76,
+              "predicted": 82615.07,
+              "residual": -1609.31,
+              "abs_pct_err": 1.99,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 3,
+              "row_id": 30,
+              "actual": 99937.59,
+              "predicted": 97683.25,
+              "residual": 2254.34,
+              "abs_pct_err": 2.26,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 4,
+              "row_id": 45,
+              "actual": 64926.08,
+              "predicted": 46400.66,
+              "residual": 18525.42,
+              "abs_pct_err": 28.53,
+              "is_outlier": true,
+              "status": "Outlier"
+            },
+            {
+              "test_id": 5,
+              "row_id": 17,
+              "actual": 125370.37,
+              "predicted": 130782.54,
+              "residual": -5412.17,
+              "abs_pct_err": 4.32,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 6,
+              "row_id": 48,
+              "actual": 35673.41,
+              "predicted": 45967.02,
+              "residual": -10293.61,
+              "abs_pct_err": 28.86,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 7,
+              "row_id": 26,
+              "actual": 105733.54,
+              "predicted": 109813.19,
+              "residual": -4079.65,
+              "abs_pct_err": 3.86,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 8,
+              "row_id": 25,
+              "actual": 107404.34,
+              "predicted": 101612.69,
+              "residual": 5791.65,
+              "abs_pct_err": 5.39,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 9,
+              "row_id": 32,
+              "actual": 97427.84,
+              "predicted": 97023.64,
+              "residual": 404.2,
+              "abs_pct_err": 0.41,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 10,
+              "row_id": 19,
+              "actual": 122776.86,
+              "predicted": 113241.37,
+              "residual": 9535.49,
+              "abs_pct_err": 7.77,
+              "is_outlier": false,
+              "status": "Normal"
+            }
+          ]
+        },
+        {
+          "k": 3,
+          "subset": [
+            "R&D Spend",
+            "Marketing Spend",
+            "State_Florida"
+          ],
+          "rmse": 8803.78,
+          "mse": 77506542.29,
+          "r2": 0.9043,
+          "adj_r2": 0.8963,
+          "mae": 6466.23,
+          "equation": "Profit = $45,422.80 + 0.7847 × (R&D Spend) + 0.0382 × (Marketing Spend) + 749.0513 × (State_Florida)",
+          "beta_vector": [
+            45422.799865294684,
+            0.7846534776655107,
+            0.03821347229503255,
+            749.051263889148
+          ],
+          "coefficients": [
+            {
+              "predictor": "Intercept",
+              "beta": 45422.799865294684,
+              "std_error": 3540.9794931138586,
+              "t_stat": 12.82775004871629,
+              "p_val": 5.551115123125783e-15,
+              "ci_lower": 38241.36059771567,
+              "ci_upper": 52604.2391328737,
+              "vif": 1.0,
+              "significance": "***"
+            },
+            {
+              "predictor": "R&D Spend",
+              "beta": 0.7846534776655107,
+              "std_error": 0.04847726920868728,
+              "t_stat": 16.186008215266764,
+              "p_val": 0.0,
+              "ci_lower": 0.6863370187994577,
+              "ci_upper": 0.8829699365315637,
+              "vif": 2.2879538046988945,
+              "significance": "***"
+            },
+            {
+              "predictor": "Marketing Spend",
+              "beta": 0.03821347229503255,
+              "std_error": 0.020572758157558123,
+              "t_stat": 1.8574792938492546,
+              "p_val": 0.07143811599557104,
+              "ci_lower": -0.0035100151079326958,
+              "ci_upper": 0.0799369596979978,
+              "vif": 2.369723149064907,
+              "significance": "."
+            },
+            {
+              "predictor": "State_Florida",
+              "beta": 749.051263889148,
+              "std_error": 3264.6956259991607,
+              "t_stat": 0.22943984668092932,
+              "p_val": 0.8198256709205398,
+              "ci_lower": -5872.0583502268655,
+              "ci_upper": 7370.160878005161,
+              "vif": 1.0553764463718027,
+              "significance": "ns"
+            }
+          ],
+          "residuals": [
+            {
+              "test_id": 1,
+              "row_id": 13,
+              "actual": 134307.35,
+              "predicted": 127260.15,
+              "residual": 7047.2,
+              "abs_pct_err": 5.25,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 2,
+              "row_id": 39,
+              "actual": 81005.76,
+              "predicted": 82365.2,
+              "residual": -1359.44,
+              "abs_pct_err": 1.68,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 3,
+              "row_id": 30,
+              "actual": 99937.59,
+              "predicted": 98298.48,
+              "residual": 1639.11,
+              "abs_pct_err": 1.64,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 4,
+              "row_id": 45,
+              "actual": 64926.08,
+              "predicted": 46280.39,
+              "residual": 18645.69,
+              "abs_pct_err": 28.72,
+              "is_outlier": true,
+              "status": "Outlier"
+            },
+            {
+              "test_id": 5,
+              "row_id": 17,
+              "actual": 125370.37,
+              "predicted": 130494.02,
+              "residual": -5123.65,
+              "abs_pct_err": 4.09,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 6,
+              "row_id": 48,
+              "actual": 35673.41,
+              "predicted": 45848.12,
+              "residual": -10174.71,
+              "abs_pct_err": 28.52,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 7,
+              "row_id": 26,
+              "actual": 105733.54,
+              "predicted": 110401.43,
+              "residual": -4667.89,
+              "abs_pct_err": 4.41,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 8,
+              "row_id": 25,
+              "actual": 107404.34,
+              "predicted": 101434.22,
+              "residual": 5970.12,
+              "abs_pct_err": 5.56,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 9,
+              "row_id": 32,
+              "actual": 97427.84,
+              "predicted": 96937.86,
+              "residual": 489.98,
+              "abs_pct_err": 0.5,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 10,
+              "row_id": 19,
+              "actual": 122776.86,
+              "predicted": 113232.32,
+              "residual": 9544.54,
+              "abs_pct_err": 7.77,
+              "is_outlier": false,
+              "status": "Normal"
+            }
+          ]
+        },
+        {
+          "k": 4,
+          "subset": [
+            "R&D Spend",
+            "Marketing Spend",
+            "State_Florida",
+            "State_New York"
+          ],
+          "rmse": 9068.54,
+          "mse": 82238417.73,
+          "r2": 0.8984,
+          "adj_r2": 0.8868,
+          "mae": 6454.51,
+          "equation": "Profit = $45,476.73 + 0.7847 × (R&D Spend) + 0.0383 × (Marketing Spend) + 664.5882 × (State_Florida) - 159.4085 × (State_New York)",
+          "beta_vector": [
+            45476.7262833778,
+            0.7847451770125891,
+            0.03829966423402536,
+            664.5882100113106,
+            -159.4085290999358
+          ],
+          "coefficients": [
+            {
+              "predictor": "Intercept",
+              "beta": 45476.7262833778,
+              "std_error": 3825.2969315359273,
+              "t_stat": 11.888417316957943,
+              "p_val": 7.638334409421077e-14,
+              "ci_lower": 37710.96065475501,
+              "ci_upper": 53242.491912000594,
+              "vif": 1.0,
+              "significance": "***"
+            },
+            {
+              "predictor": "R&D Spend",
+              "beta": 0.7847451770125891,
+              "std_error": 0.049214794446026014,
+              "t_stat": 15.945310467022697,
+              "p_val": 0.0,
+              "ci_lower": 0.6848338326205007,
+              "ci_upper": 0.8846565214046774,
+              "vif": 2.292707374813337,
+              "significance": "***"
+            },
+            {
+              "predictor": "Marketing Spend",
+              "beta": 0.03829966423402536,
+              "std_error": 0.020970140963417528,
+              "t_stat": 1.8263904043773114,
+              "p_val": 0.07633141030634727,
+              "ci_lower": -0.004271985192335848,
+              "ci_upper": 0.08087131366038657,
+              "vif": 2.393875662475562,
+              "significance": "."
+            },
+            {
+              "predictor": "State_Florida",
+              "beta": 664.5882100113106,
+              "std_error": 3901.63617839157,
+              "t_stat": 0.17033577187232352,
+              "p_val": 0.865726922386606,
+              "ci_lower": -7256.154328889785,
+              "ci_upper": 8585.330748912405,
+              "vif": 1.4655541253123714,
+              "significance": "ns"
+            },
+            {
+              "predictor": "State_New York",
+              "beta": -159.4085290999358,
+              "std_error": 3895.6203397766776,
+              "t_stat": -0.04091993448957969,
+              "p_val": 0.967592266218873,
+              "ci_lower": -8067.938266333864,
+              "ci_upper": 7749.121208133993,
+              "vif": 1.4088582685780118,
+              "significance": "ns"
+            }
+          ],
+          "residuals": [
+            {
+              "test_id": 1,
+              "row_id": 13,
+              "actual": 134307.35,
+              "predicted": 127344.29,
+              "residual": 6963.06,
+              "abs_pct_err": 5.18,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 2,
+              "row_id": 39,
+              "actual": 81005.76,
+              "predicted": 82437.75,
+              "residual": -1431.99,
+              "abs_pct_err": 1.77,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 3,
+              "row_id": 30,
+              "actual": 99937.59,
+              "predicted": 98281.48,
+              "residual": 1656.11,
+              "abs_pct_err": 1.66,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 4,
+              "row_id": 45,
+              "actual": 64926.08,
+              "predicted": 46175.16,
+              "residual": 18750.92,
+              "abs_pct_err": 28.88,
+              "is_outlier": true,
+              "status": "Outlier"
+            },
+            {
+              "test_id": 5,
+              "row_id": 17,
+              "actual": 125370.37,
+              "predicted": 130421.57,
+              "residual": -5051.2,
+              "abs_pct_err": 4.03,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 6,
+              "row_id": 48,
+              "actual": 35673.41,
+              "predicted": 45742.69,
+              "residual": -10069.28,
+              "abs_pct_err": 28.23,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 7,
+              "row_id": 26,
+              "actual": 105733.54,
+              "predicted": 110389.35,
+              "residual": -4655.81,
+              "abs_pct_err": 4.4,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 8,
+              "row_id": 25,
+              "actual": 107404.34,
+              "predicted": 101505.97,
+              "residual": 5898.37,
+              "abs_pct_err": 5.49,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 9,
+              "row_id": 32,
+              "actual": 97427.84,
+              "predicted": 97001.57,
+              "residual": 426.27,
+              "abs_pct_err": 0.44,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 10,
+              "row_id": 19,
+              "actual": 122776.86,
+              "predicted": 113134.76,
+              "residual": 9642.1,
+              "abs_pct_err": 7.85,
+              "is_outlier": false,
+              "status": "Normal"
+            }
+          ]
+        },
+        {
+          "k": 5,
+          "subset": [
+            "R&D Spend",
+            "Administration",
+            "Marketing Spend",
+            "State_Florida",
+            "State_New York"
+          ],
+          "rmse": 9137.99,
+          "mse": 83502861.24,
+          "r2": 0.9347,
+          "adj_r2": 0.9251,
+          "mae": 6961.48,
+          "equation": "Profit = $54,028.04 + 0.8056 × (R&D Spend) - 0.0688 × (Administration) + 0.0299 × (Marketing Spend) + 938.7930 × (State_Florida) + 6.9878 × (State_New York)",
+          "beta_vector": [
+            54028.039594058704,
+            0.8056300637569415,
+            -0.06878788228413198,
+            0.02985544291038674,
+            938.7930061484234,
+            6.987759966985652
+          ],
+          "coefficients": [
+            {
+              "predictor": "Intercept",
+              "beta": 54028.039594058704,
+              "std_error": 8457.293260974295,
+              "t_stat": 6.388337015977448,
+              "p_val": 2.7088902365690615e-07,
+              "ci_lower": 36840.751800753955,
+              "ci_upper": 71215.32738736345,
+              "vif": 1.0,
+              "significance": "***"
+            },
+            {
+              "predictor": "R&D Spend",
+              "beta": 0.8056300637569415,
+              "std_error": 0.0523712487634118,
+              "t_stat": 15.383060033500287,
+              "p_val": 0.0,
+              "ci_lower": 0.6991988810113855,
+              "ci_upper": 0.9120612465024974,
+              "vif": 2.6171974116238235,
+              "significance": "***"
+            },
+            {
+              "predictor": "Administration",
+              "beta": -0.06878788228413198,
+              "std_error": 0.06073725885729177,
+              "t_stat": -1.1325483497000737,
+              "p_val": 0.26532799260438655,
+              "ci_lower": -0.19222084310787213,
+              "ci_upper": 0.05464507853960816,
+              "vif": 1.1565116160578504,
+              "significance": "ns"
+            },
+            {
+              "predictor": "Marketing Spend",
+              "beta": 0.02985544291038674,
+              "std_error": 0.02217690135536517,
+              "t_stat": 1.34624050637101,
+              "p_val": 0.18713248451717002,
+              "ci_lower": -0.015213443102734786,
+              "ci_upper": 0.07492432892350827,
+              "vif": 2.698944569752321,
+              "significance": "ns"
+            },
+            {
+              "predictor": "State_Florida",
+              "beta": 938.7930061484234,
+              "std_error": 3893.5108845973637,
+              "t_stat": 0.2411173447240808,
+              "p_val": 0.8109123470728932,
+              "ci_lower": -6973.7731110433415,
+              "ci_upper": 8851.359123340188,
+              "vif": 1.4712431557726304,
+              "significance": "ns"
+            },
+            {
+              "predictor": "State_New York",
+              "beta": 6.987759966985652,
+              "std_error": 3882.7648770093274,
+              "t_stat": 0.0017996866120742097,
+              "p_val": 0.9985745767960659,
+              "ci_lower": -7883.739842306905,
+              "ci_upper": 7897.715362240876,
+              "vif": 1.410878407198013,
+              "significance": "ns"
+            }
+          ],
+          "residuals": [
+            {
+              "test_id": 1,
+              "row_id": 13,
+              "actual": 134307.35,
+              "predicted": 126362.88,
+              "residual": 7944.47,
+              "abs_pct_err": 5.92,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 2,
+              "row_id": 39,
+              "actual": 81005.76,
+              "predicted": 84608.45,
+              "residual": -3602.69,
+              "abs_pct_err": 4.45,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 3,
+              "row_id": 30,
+              "actual": 99937.59,
+              "predicted": 99677.49,
+              "residual": 260.1,
+              "abs_pct_err": 0.26,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 4,
+              "row_id": 45,
+              "actual": 64926.08,
+              "predicted": 46357.46,
+              "residual": 18568.62,
+              "abs_pct_err": 28.6,
+              "is_outlier": true,
+              "status": "Outlier"
+            },
+            {
+              "test_id": 5,
+              "row_id": 17,
+              "actual": 125370.37,
+              "predicted": 128750.48,
+              "residual": -3380.11,
+              "abs_pct_err": 2.7,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 6,
+              "row_id": 48,
+              "actual": 35673.41,
+              "predicted": 50912.42,
+              "residual": -15239.01,
+              "abs_pct_err": 42.72,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 7,
+              "row_id": 26,
+              "actual": 105733.54,
+              "predicted": 109741.35,
+              "residual": -4007.81,
+              "abs_pct_err": 3.79,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 8,
+              "row_id": 25,
+              "actual": 107404.34,
+              "predicted": 100643.24,
+              "residual": 6761.1,
+              "abs_pct_err": 6.29,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 9,
+              "row_id": 32,
+              "actual": 97427.84,
+              "predicted": 97599.28,
+              "residual": -171.44,
+              "abs_pct_err": 0.18,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 10,
+              "row_id": 19,
+              "actual": 122776.86,
+              "predicted": 113097.43,
+              "residual": 9679.43,
+              "abs_pct_err": 7.88,
+              "is_outlier": false,
+              "status": "Normal"
+            }
+          ]
+        }
+      ]
+    },
+    "ElasticNet": {
+      "name": "ElasticNet Ranking",
+      "best_subset": [
+        "R&D Spend",
+        "Marketing Spend"
+      ],
+      "k_evaluations": [
+        {
+          "k": 1,
+          "subset": [
+            "R&D Spend"
+          ],
+          "rmse": 8274.87,
+          "mse": 68473473.52,
+          "r2": 0.9465,
+          "adj_r2": 0.9451,
+          "mae": 6077.36,
+          "equation": "Profit = $49,336.67 + 0.8536 × (R&D Spend)",
+          "beta_vector": [
+            49336.66803799111,
+            0.8536091075148805
+          ],
+          "coefficients": [
+            {
+              "predictor": "Intercept",
+              "beta": 49336.66803799111,
+              "std_error": 2985.818740367318,
+              "t_stat": 16.52366480623056,
+              "p_val": 0.0,
+              "ci_lower": 43292.19400549253,
+              "ci_upper": 55381.142070489695,
+              "vif": 1.0,
+              "significance": "***"
+            },
+            {
+              "predictor": "R&D Spend",
+              "beta": 0.8536091075148805,
+              "std_error": 0.032828607283217744,
+              "t_stat": 26.001989671710884,
+              "p_val": 0.0,
+              "ci_lower": 0.7871510665213766,
+              "ci_upper": 0.9200671485083844,
+              "vif": 1.0,
+              "significance": "***"
+            }
+          ],
+          "residuals": [
+            {
+              "test_id": 1,
+              "row_id": 13,
+              "actual": 134307.35,
+              "predicted": 127862.21,
+              "residual": 6445.14,
+              "abs_pct_err": 4.8,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 2,
+              "row_id": 39,
+              "actual": 81005.76,
+              "predicted": 82250.56,
+              "residual": -1244.8,
+              "abs_pct_err": 1.54,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 3,
+              "row_id": 30,
+              "actual": 99937.59,
+              "predicted": 102255.72,
+              "residual": -2318.13,
+              "abs_pct_err": 2.32,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 4,
+              "row_id": 45,
+              "actual": 64926.08,
+              "predicted": 50190.47,
+              "residual": 14735.61,
+              "abs_pct_err": 22.7,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 5,
+              "row_id": 17,
+              "actual": 125370.37,
+              "predicted": 130136.88,
+              "residual": -4766.51,
+              "abs_pct_err": 3.8,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 6,
+              "row_id": 48,
+              "actual": 35673.41,
+              "predicted": 49799.37,
+              "residual": -14125.96,
+              "abs_pct_err": 39.6,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 7,
+              "row_id": 26,
+              "actual": 105733.54,
+              "predicted": 113638.08,
+              "residual": -7904.54,
+              "abs_pct_err": 7.48,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 8,
+              "row_id": 25,
+              "actual": 107404.34,
+              "predicted": 104535.05,
+              "residual": 2869.29,
+              "abs_pct_err": 2.67,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 9,
+              "row_id": 32,
+              "actual": 97427.84,
+              "predicted": 103463.05,
+              "residual": -6035.21,
+              "abs_pct_err": 6.19,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 10,
+              "row_id": 19,
+              "actual": 122776.86,
+              "predicted": 123105.31,
+              "residual": -328.45,
+              "abs_pct_err": 0.27,
+              "is_outlier": false,
+              "status": "Normal"
+            }
+          ]
+        },
+        {
+          "k": 2,
+          "subset": [
+            "R&D Spend",
+            "Marketing Spend"
+          ],
+          "rmse": 8198.8,
+          "mse": 67220321.44,
+          "r2": 0.9474,
+          "adj_r2": 0.9446,
+          "mae": 6469.18,
+          "equation": "Profit = $45,542.39 + 0.7834 × (R&D Spend) + 0.0392 × (Marketing Spend)",
+          "beta_vector": [
+            45542.392477514215,
+            0.7833743148902919,
+            0.039239787145531495
+          ],
+          "coefficients": [
+            {
+              "predictor": "Intercept",
+              "beta": 45542.392477514215,
+              "std_error": 3457.276957071691,
+              "t_stat": 13.172908344632177,
+              "p_val": 1.5543122344752192e-15,
+              "ci_lower": 38537.28396449134,
+              "ci_upper": 52547.50099053709,
+              "vif": 1.0,
+              "significance": "***"
+            },
+            {
+              "predictor": "R&D Spend",
+              "beta": 0.7833743148902919,
+              "std_error": 0.04753512334486892,
+              "t_stat": 16.479904958000947,
+              "p_val": 0.0,
+              "ci_lower": 0.6870590062397594,
+              "ci_upper": 0.8796896235408244,
+              "vif": 2.257692691913017,
+              "significance": "***"
+            },
+            {
+              "predictor": "Marketing Spend",
+              "beta": 0.039239787145531495,
+              "std_error": 0.01982183326557591,
+              "t_stat": 1.979624519074039,
+              "p_val": 0.0552215041174795,
+              "ci_lower": -0.000923062020598088,
+              "ci_upper": 0.07940263631166108,
+              "vif": 2.2576926919130162,
+              "significance": "."
+            }
+          ],
+          "residuals": [
+            {
+              "test_id": 1,
+              "row_id": 13,
+              "actual": 134307.35,
+              "predicted": 127521.39,
+              "residual": 6785.96,
+              "abs_pct_err": 5.05,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 2,
+              "row_id": 39,
+              "actual": 81005.76,
+              "predicted": 82615.07,
+              "residual": -1609.31,
+              "abs_pct_err": 1.99,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 3,
+              "row_id": 30,
+              "actual": 99937.59,
+              "predicted": 97683.25,
+              "residual": 2254.34,
+              "abs_pct_err": 2.26,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 4,
+              "row_id": 45,
+              "actual": 64926.08,
+              "predicted": 46400.66,
+              "residual": 18525.42,
+              "abs_pct_err": 28.53,
+              "is_outlier": true,
+              "status": "Outlier"
+            },
+            {
+              "test_id": 5,
+              "row_id": 17,
+              "actual": 125370.37,
+              "predicted": 130782.54,
+              "residual": -5412.17,
+              "abs_pct_err": 4.32,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 6,
+              "row_id": 48,
+              "actual": 35673.41,
+              "predicted": 45967.02,
+              "residual": -10293.61,
+              "abs_pct_err": 28.86,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 7,
+              "row_id": 26,
+              "actual": 105733.54,
+              "predicted": 109813.19,
+              "residual": -4079.65,
+              "abs_pct_err": 3.86,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 8,
+              "row_id": 25,
+              "actual": 107404.34,
+              "predicted": 101612.69,
+              "residual": 5791.65,
+              "abs_pct_err": 5.39,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 9,
+              "row_id": 32,
+              "actual": 97427.84,
+              "predicted": 97023.64,
+              "residual": 404.2,
+              "abs_pct_err": 0.41,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 10,
+              "row_id": 19,
+              "actual": 122776.86,
+              "predicted": 113241.37,
+              "residual": 9535.49,
+              "abs_pct_err": 7.77,
+              "is_outlier": false,
+              "status": "Normal"
+            }
+          ]
+        },
+        {
+          "k": 3,
+          "subset": [
+            "R&D Spend",
+            "Marketing Spend",
+            "State_Florida"
+          ],
+          "rmse": 8803.78,
+          "mse": 77506542.29,
+          "r2": 0.9043,
+          "adj_r2": 0.8963,
+          "mae": 6466.23,
+          "equation": "Profit = $45,422.80 + 0.7847 × (R&D Spend) + 0.0382 × (Marketing Spend) + 749.0513 × (State_Florida)",
+          "beta_vector": [
+            45422.799865294684,
+            0.7846534776655107,
+            0.03821347229503255,
+            749.051263889148
+          ],
+          "coefficients": [
+            {
+              "predictor": "Intercept",
+              "beta": 45422.799865294684,
+              "std_error": 3540.9794931138586,
+              "t_stat": 12.82775004871629,
+              "p_val": 5.551115123125783e-15,
+              "ci_lower": 38241.36059771567,
+              "ci_upper": 52604.2391328737,
+              "vif": 1.0,
+              "significance": "***"
+            },
+            {
+              "predictor": "R&D Spend",
+              "beta": 0.7846534776655107,
+              "std_error": 0.04847726920868728,
+              "t_stat": 16.186008215266764,
+              "p_val": 0.0,
+              "ci_lower": 0.6863370187994577,
+              "ci_upper": 0.8829699365315637,
+              "vif": 2.2879538046988945,
+              "significance": "***"
+            },
+            {
+              "predictor": "Marketing Spend",
+              "beta": 0.03821347229503255,
+              "std_error": 0.020572758157558123,
+              "t_stat": 1.8574792938492546,
+              "p_val": 0.07143811599557104,
+              "ci_lower": -0.0035100151079326958,
+              "ci_upper": 0.0799369596979978,
+              "vif": 2.369723149064907,
+              "significance": "."
+            },
+            {
+              "predictor": "State_Florida",
+              "beta": 749.051263889148,
+              "std_error": 3264.6956259991607,
+              "t_stat": 0.22943984668092932,
+              "p_val": 0.8198256709205398,
+              "ci_lower": -5872.0583502268655,
+              "ci_upper": 7370.160878005161,
+              "vif": 1.0553764463718027,
+              "significance": "ns"
+            }
+          ],
+          "residuals": [
+            {
+              "test_id": 1,
+              "row_id": 13,
+              "actual": 134307.35,
+              "predicted": 127260.15,
+              "residual": 7047.2,
+              "abs_pct_err": 5.25,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 2,
+              "row_id": 39,
+              "actual": 81005.76,
+              "predicted": 82365.2,
+              "residual": -1359.44,
+              "abs_pct_err": 1.68,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 3,
+              "row_id": 30,
+              "actual": 99937.59,
+              "predicted": 98298.48,
+              "residual": 1639.11,
+              "abs_pct_err": 1.64,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 4,
+              "row_id": 45,
+              "actual": 64926.08,
+              "predicted": 46280.39,
+              "residual": 18645.69,
+              "abs_pct_err": 28.72,
+              "is_outlier": true,
+              "status": "Outlier"
+            },
+            {
+              "test_id": 5,
+              "row_id": 17,
+              "actual": 125370.37,
+              "predicted": 130494.02,
+              "residual": -5123.65,
+              "abs_pct_err": 4.09,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 6,
+              "row_id": 48,
+              "actual": 35673.41,
+              "predicted": 45848.12,
+              "residual": -10174.71,
+              "abs_pct_err": 28.52,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 7,
+              "row_id": 26,
+              "actual": 105733.54,
+              "predicted": 110401.43,
+              "residual": -4667.89,
+              "abs_pct_err": 4.41,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 8,
+              "row_id": 25,
+              "actual": 107404.34,
+              "predicted": 101434.22,
+              "residual": 5970.12,
+              "abs_pct_err": 5.56,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 9,
+              "row_id": 32,
+              "actual": 97427.84,
+              "predicted": 96937.86,
+              "residual": 489.98,
+              "abs_pct_err": 0.5,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 10,
+              "row_id": 19,
+              "actual": 122776.86,
+              "predicted": 113232.32,
+              "residual": 9544.54,
+              "abs_pct_err": 7.77,
+              "is_outlier": false,
+              "status": "Normal"
+            }
+          ]
+        },
+        {
+          "k": 4,
+          "subset": [
+            "R&D Spend",
+            "Marketing Spend",
+            "State_Florida",
+            "State_New York"
+          ],
+          "rmse": 8997.2,
+          "mse": 80949607.84,
+          "r2": 0.9,
+          "adj_r2": 0.8886,
+          "mae": 6454.51,
+          "equation": "Profit = $45,476.73 + 0.7847 × (R&D Spend) + 0.0383 × (Marketing Spend) + 664.5882 × (State_Florida) - 159.4085 × (State_New York)",
+          "beta_vector": [
+            45476.7262833778,
+            0.7847451770125891,
+            0.03829966423402536,
+            664.5882100113106,
+            -159.4085290999358
+          ],
+          "coefficients": [
+            {
+              "predictor": "Intercept",
+              "beta": 45476.7262833778,
+              "std_error": 3825.2969315359273,
+              "t_stat": 11.888417316957943,
+              "p_val": 7.638334409421077e-14,
+              "ci_lower": 37710.96065475501,
+              "ci_upper": 53242.491912000594,
+              "vif": 1.0,
+              "significance": "***"
+            },
+            {
+              "predictor": "R&D Spend",
+              "beta": 0.7847451770125891,
+              "std_error": 0.049214794446026014,
+              "t_stat": 15.945310467022697,
+              "p_val": 0.0,
+              "ci_lower": 0.6848338326205007,
+              "ci_upper": 0.8846565214046774,
+              "vif": 2.292707374813337,
+              "significance": "***"
+            },
+            {
+              "predictor": "Marketing Spend",
+              "beta": 0.03829966423402536,
+              "std_error": 0.020970140963417528,
+              "t_stat": 1.8263904043773114,
+              "p_val": 0.07633141030634727,
+              "ci_lower": -0.004271985192335848,
+              "ci_upper": 0.08087131366038657,
+              "vif": 2.393875662475562,
+              "significance": "."
+            },
+            {
+              "predictor": "State_Florida",
+              "beta": 664.5882100113106,
+              "std_error": 3901.63617839157,
+              "t_stat": 0.17033577187232352,
+              "p_val": 0.865726922386606,
+              "ci_lower": -7256.154328889785,
+              "ci_upper": 8585.330748912405,
+              "vif": 1.4655541253123714,
+              "significance": "ns"
+            },
+            {
+              "predictor": "State_New York",
+              "beta": -159.4085290999358,
+              "std_error": 3895.6203397766776,
+              "t_stat": -0.04091993448957969,
+              "p_val": 0.967592266218873,
+              "ci_lower": -8067.938266333864,
+              "ci_upper": 7749.121208133993,
+              "vif": 1.4088582685780118,
+              "significance": "ns"
+            }
+          ],
+          "residuals": [
+            {
+              "test_id": 1,
+              "row_id": 13,
+              "actual": 134307.35,
+              "predicted": 127344.29,
+              "residual": 6963.06,
+              "abs_pct_err": 5.18,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 2,
+              "row_id": 39,
+              "actual": 81005.76,
+              "predicted": 82437.75,
+              "residual": -1431.99,
+              "abs_pct_err": 1.77,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 3,
+              "row_id": 30,
+              "actual": 99937.59,
+              "predicted": 98281.48,
+              "residual": 1656.11,
+              "abs_pct_err": 1.66,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 4,
+              "row_id": 45,
+              "actual": 64926.08,
+              "predicted": 46175.16,
+              "residual": 18750.92,
+              "abs_pct_err": 28.88,
+              "is_outlier": true,
+              "status": "Outlier"
+            },
+            {
+              "test_id": 5,
+              "row_id": 17,
+              "actual": 125370.37,
+              "predicted": 130421.57,
+              "residual": -5051.2,
+              "abs_pct_err": 4.03,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 6,
+              "row_id": 48,
+              "actual": 35673.41,
+              "predicted": 45742.69,
+              "residual": -10069.28,
+              "abs_pct_err": 28.23,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 7,
+              "row_id": 26,
+              "actual": 105733.54,
+              "predicted": 110389.35,
+              "residual": -4655.81,
+              "abs_pct_err": 4.4,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 8,
+              "row_id": 25,
+              "actual": 107404.34,
+              "predicted": 101505.97,
+              "residual": 5898.37,
+              "abs_pct_err": 5.49,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 9,
+              "row_id": 32,
+              "actual": 97427.84,
+              "predicted": 97001.57,
+              "residual": 426.27,
+              "abs_pct_err": 0.44,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 10,
+              "row_id": 19,
+              "actual": 122776.86,
+              "predicted": 113134.76,
+              "residual": 9642.1,
+              "abs_pct_err": 7.85,
+              "is_outlier": false,
+              "status": "Normal"
+            }
+          ]
+        },
+        {
+          "k": 5,
+          "subset": [
+            "R&D Spend",
+            "Administration",
+            "Marketing Spend",
+            "State_Florida",
+            "State_New York"
+          ],
+          "rmse": 9137.99,
+          "mse": 83502861.24,
+          "r2": 0.9347,
+          "adj_r2": 0.9251,
+          "mae": 6961.48,
+          "equation": "Profit = $54,028.04 + 0.8056 × (R&D Spend) - 0.0688 × (Administration) + 0.0299 × (Marketing Spend) + 938.7930 × (State_Florida) + 6.9878 × (State_New York)",
+          "beta_vector": [
+            54028.039594058704,
+            0.8056300637569415,
+            -0.06878788228413198,
+            0.02985544291038674,
+            938.7930061484234,
+            6.987759966985652
+          ],
+          "coefficients": [
+            {
+              "predictor": "Intercept",
+              "beta": 54028.039594058704,
+              "std_error": 8457.293260974295,
+              "t_stat": 6.388337015977448,
+              "p_val": 2.7088902365690615e-07,
+              "ci_lower": 36840.751800753955,
+              "ci_upper": 71215.32738736345,
+              "vif": 1.0,
+              "significance": "***"
+            },
+            {
+              "predictor": "R&D Spend",
+              "beta": 0.8056300637569415,
+              "std_error": 0.0523712487634118,
+              "t_stat": 15.383060033500287,
+              "p_val": 0.0,
+              "ci_lower": 0.6991988810113855,
+              "ci_upper": 0.9120612465024974,
+              "vif": 2.6171974116238235,
+              "significance": "***"
+            },
+            {
+              "predictor": "Administration",
+              "beta": -0.06878788228413198,
+              "std_error": 0.06073725885729177,
+              "t_stat": -1.1325483497000737,
+              "p_val": 0.26532799260438655,
+              "ci_lower": -0.19222084310787213,
+              "ci_upper": 0.05464507853960816,
+              "vif": 1.1565116160578504,
+              "significance": "ns"
+            },
+            {
+              "predictor": "Marketing Spend",
+              "beta": 0.02985544291038674,
+              "std_error": 0.02217690135536517,
+              "t_stat": 1.34624050637101,
+              "p_val": 0.18713248451717002,
+              "ci_lower": -0.015213443102734786,
+              "ci_upper": 0.07492432892350827,
+              "vif": 2.698944569752321,
+              "significance": "ns"
+            },
+            {
+              "predictor": "State_Florida",
+              "beta": 938.7930061484234,
+              "std_error": 3893.5108845973637,
+              "t_stat": 0.2411173447240808,
+              "p_val": 0.8109123470728932,
+              "ci_lower": -6973.7731110433415,
+              "ci_upper": 8851.359123340188,
+              "vif": 1.4712431557726304,
+              "significance": "ns"
+            },
+            {
+              "predictor": "State_New York",
+              "beta": 6.987759966985652,
+              "std_error": 3882.7648770093274,
+              "t_stat": 0.0017996866120742097,
+              "p_val": 0.9985745767960659,
+              "ci_lower": -7883.739842306905,
+              "ci_upper": 7897.715362240876,
+              "vif": 1.410878407198013,
+              "significance": "ns"
+            }
+          ],
+          "residuals": [
+            {
+              "test_id": 1,
+              "row_id": 13,
+              "actual": 134307.35,
+              "predicted": 126362.88,
+              "residual": 7944.47,
+              "abs_pct_err": 5.92,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 2,
+              "row_id": 39,
+              "actual": 81005.76,
+              "predicted": 84608.45,
+              "residual": -3602.69,
+              "abs_pct_err": 4.45,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 3,
+              "row_id": 30,
+              "actual": 99937.59,
+              "predicted": 99677.49,
+              "residual": 260.1,
+              "abs_pct_err": 0.26,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 4,
+              "row_id": 45,
+              "actual": 64926.08,
+              "predicted": 46357.46,
+              "residual": 18568.62,
+              "abs_pct_err": 28.6,
+              "is_outlier": true,
+              "status": "Outlier"
+            },
+            {
+              "test_id": 5,
+              "row_id": 17,
+              "actual": 125370.37,
+              "predicted": 128750.48,
+              "residual": -3380.11,
+              "abs_pct_err": 2.7,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 6,
+              "row_id": 48,
+              "actual": 35673.41,
+              "predicted": 50912.42,
+              "residual": -15239.01,
+              "abs_pct_err": 42.72,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 7,
+              "row_id": 26,
+              "actual": 105733.54,
+              "predicted": 109741.35,
+              "residual": -4007.81,
+              "abs_pct_err": 3.79,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 8,
+              "row_id": 25,
+              "actual": 107404.34,
+              "predicted": 100643.24,
+              "residual": 6761.1,
+              "abs_pct_err": 6.29,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 9,
+              "row_id": 32,
+              "actual": 97427.84,
+              "predicted": 97599.28,
+              "residual": -171.44,
+              "abs_pct_err": 0.18,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 10,
+              "row_id": 19,
+              "actual": 122776.86,
+              "predicted": 113097.43,
+              "residual": 9679.43,
+              "abs_pct_err": 7.88,
+              "is_outlier": false,
+              "status": "Normal"
+            }
+          ]
+        }
+      ]
+    },
+    "Exhaustive": {
+      "name": "Exhaustive (Best Subset)",
+      "best_subset": [
+        "R&D Spend",
+        "Administration",
+        "State_Florida"
+      ],
+      "k_evaluations": [
+        {
+          "k": 1,
+          "subset": [
+            "R&D Spend"
+          ],
+          "rmse": 8274.87,
+          "mse": 68473473.52,
+          "r2": 0.9465,
+          "adj_r2": 0.9451,
+          "mae": 6077.36,
+          "equation": "Profit = $49,336.67 + 0.8536 × (R&D Spend)",
+          "beta_vector": [
+            49336.66803799111,
+            0.8536091075148805
+          ],
+          "coefficients": [
+            {
+              "predictor": "Intercept",
+              "beta": 49336.66803799111,
+              "std_error": 2985.818740367318,
+              "t_stat": 16.52366480623056,
+              "p_val": 0.0,
+              "ci_lower": 43292.19400549253,
+              "ci_upper": 55381.142070489695,
+              "vif": 1.0,
+              "significance": "***"
+            },
+            {
+              "predictor": "R&D Spend",
+              "beta": 0.8536091075148805,
+              "std_error": 0.032828607283217744,
+              "t_stat": 26.001989671710884,
+              "p_val": 0.0,
+              "ci_lower": 0.7871510665213766,
+              "ci_upper": 0.9200671485083844,
+              "vif": 1.0,
+              "significance": "***"
+            }
+          ],
+          "residuals": [
+            {
+              "test_id": 1,
+              "row_id": 13,
+              "actual": 134307.35,
+              "predicted": 127862.21,
+              "residual": 6445.14,
+              "abs_pct_err": 4.8,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 2,
+              "row_id": 39,
+              "actual": 81005.76,
+              "predicted": 82250.56,
+              "residual": -1244.8,
+              "abs_pct_err": 1.54,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 3,
+              "row_id": 30,
+              "actual": 99937.59,
+              "predicted": 102255.72,
+              "residual": -2318.13,
+              "abs_pct_err": 2.32,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 4,
+              "row_id": 45,
+              "actual": 64926.08,
+              "predicted": 50190.47,
+              "residual": 14735.61,
+              "abs_pct_err": 22.7,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 5,
+              "row_id": 17,
+              "actual": 125370.37,
+              "predicted": 130136.88,
+              "residual": -4766.51,
+              "abs_pct_err": 3.8,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 6,
+              "row_id": 48,
+              "actual": 35673.41,
+              "predicted": 49799.37,
+              "residual": -14125.96,
+              "abs_pct_err": 39.6,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 7,
+              "row_id": 26,
+              "actual": 105733.54,
+              "predicted": 113638.08,
+              "residual": -7904.54,
+              "abs_pct_err": 7.48,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 8,
+              "row_id": 25,
+              "actual": 107404.34,
+              "predicted": 104535.05,
+              "residual": 2869.29,
+              "abs_pct_err": 2.67,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 9,
+              "row_id": 32,
+              "actual": 97427.84,
+              "predicted": 103463.05,
+              "residual": -6035.21,
+              "abs_pct_err": 6.19,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 10,
+              "row_id": 19,
+              "actual": 122776.86,
+              "predicted": 123105.31,
+              "residual": -328.45,
+              "abs_pct_err": 0.27,
+              "is_outlier": false,
+              "status": "Normal"
+            }
+          ]
+        },
+        {
+          "k": 2,
+          "subset": [
+            "R&D Spend",
+            "Marketing Spend"
+          ],
+          "rmse": 8198.8,
+          "mse": 67220321.44,
+          "r2": 0.9474,
+          "adj_r2": 0.9446,
+          "mae": 6469.18,
+          "equation": "Profit = $45,542.39 + 0.7834 × (R&D Spend) + 0.0392 × (Marketing Spend)",
+          "beta_vector": [
+            45542.392477514215,
+            0.7833743148902919,
+            0.039239787145531495
+          ],
+          "coefficients": [
+            {
+              "predictor": "Intercept",
+              "beta": 45542.392477514215,
+              "std_error": 3457.276957071691,
+              "t_stat": 13.172908344632177,
+              "p_val": 1.5543122344752192e-15,
+              "ci_lower": 38537.28396449134,
+              "ci_upper": 52547.50099053709,
+              "vif": 1.0,
+              "significance": "***"
+            },
+            {
+              "predictor": "R&D Spend",
+              "beta": 0.7833743148902919,
+              "std_error": 0.04753512334486892,
+              "t_stat": 16.479904958000947,
+              "p_val": 0.0,
+              "ci_lower": 0.6870590062397594,
+              "ci_upper": 0.8796896235408244,
+              "vif": 2.257692691913017,
+              "significance": "***"
+            },
+            {
+              "predictor": "Marketing Spend",
+              "beta": 0.039239787145531495,
+              "std_error": 0.01982183326557591,
+              "t_stat": 1.979624519074039,
+              "p_val": 0.0552215041174795,
+              "ci_lower": -0.000923062020598088,
+              "ci_upper": 0.07940263631166108,
+              "vif": 2.2576926919130162,
+              "significance": "."
+            }
+          ],
+          "residuals": [
+            {
+              "test_id": 1,
+              "row_id": 13,
+              "actual": 134307.35,
+              "predicted": 127521.39,
+              "residual": 6785.96,
+              "abs_pct_err": 5.05,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 2,
+              "row_id": 39,
+              "actual": 81005.76,
+              "predicted": 82615.07,
+              "residual": -1609.31,
+              "abs_pct_err": 1.99,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 3,
+              "row_id": 30,
+              "actual": 99937.59,
+              "predicted": 97683.25,
+              "residual": 2254.34,
+              "abs_pct_err": 2.26,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 4,
+              "row_id": 45,
+              "actual": 64926.08,
+              "predicted": 46400.66,
+              "residual": 18525.42,
+              "abs_pct_err": 28.53,
+              "is_outlier": true,
+              "status": "Outlier"
+            },
+            {
+              "test_id": 5,
+              "row_id": 17,
+              "actual": 125370.37,
+              "predicted": 130782.54,
+              "residual": -5412.17,
+              "abs_pct_err": 4.32,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 6,
+              "row_id": 48,
+              "actual": 35673.41,
+              "predicted": 45967.02,
+              "residual": -10293.61,
+              "abs_pct_err": 28.86,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 7,
+              "row_id": 26,
+              "actual": 105733.54,
+              "predicted": 109813.19,
+              "residual": -4079.65,
+              "abs_pct_err": 3.86,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 8,
+              "row_id": 25,
+              "actual": 107404.34,
+              "predicted": 101612.69,
+              "residual": 5791.65,
+              "abs_pct_err": 5.39,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 9,
+              "row_id": 32,
+              "actual": 97427.84,
+              "predicted": 97023.64,
+              "residual": 404.2,
+              "abs_pct_err": 0.41,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 10,
+              "row_id": 19,
+              "actual": 122776.86,
+              "predicted": 113241.37,
+              "residual": 9535.49,
+              "abs_pct_err": 7.77,
+              "is_outlier": false,
+              "status": "Normal"
+            }
+          ]
+        },
+        {
+          "k": 3,
+          "subset": [
+            "R&D Spend",
+            "Administration",
+            "State_Florida"
+          ],
+          "rmse": 8171.65,
+          "mse": 66775863.72,
+          "r2": 0.9175,
+          "adj_r2": 0.9106,
+          "mae": 7429.96,
+          "equation": "Profit = $59,765.57 + 0.8608 × (R&D Spend) - 0.0963 × (Administration) + 1924.5274 × (State_Florida)",
+          "beta_vector": [
+            59765.56539816383,
+            0.8608046126933754,
+            -0.09626220810471485,
+            1924.527386570613
+          ],
+          "coefficients": [
+            {
+              "predictor": "Intercept",
+              "beta": 59765.56539816383,
+              "std_error": 7231.389042698514,
+              "t_stat": 8.264742091079823,
+              "p_val": 7.775726729164489e-10,
+              "ci_lower": 45099.628661911214,
+              "ci_upper": 74431.50213441644,
+              "vif": 1.0,
+              "significance": "***"
+            },
+            {
+              "predictor": "R&D Spend",
+              "beta": 0.8608046126933754,
+              "std_error": 0.03279751500975366,
+              "t_stat": 26.246031519076382,
+              "p_val": 0.0,
+              "ci_lower": 0.7942881692550277,
+              "ci_upper": 0.9273210561317231,
+              "vif": 1.0311929146159409,
+              "significance": "***"
+            },
+            {
+              "predictor": "Administration",
+              "beta": -0.09626220810471485,
+              "std_error": 0.05706955747376019,
+              "t_stat": -1.686752313595123,
+              "p_val": 0.10029942995179209,
+              "ci_lower": -0.21200463525585692,
+              "ci_upper": 0.019480219046427216,
+              "vif": 1.0257843111443603,
+              "significance": "ns"
+            },
+            {
+              "predictor": "State_Florida",
+              "beta": 1924.527386570613,
+              "std_error": 3212.4334518406686,
+              "t_stat": 0.5990870831792304,
+              "p_val": 0.5528664701555002,
+              "ci_lower": -4590.5896256563665,
+              "ci_upper": 8439.644398797593,
+              "vif": 1.006183906676365,
+              "significance": "ns"
+            }
+          ],
+          "residuals": [
+            {
+              "test_id": 1,
+              "row_id": 13,
+              "actual": 134307.35,
+              "predicted": 125909.98,
+              "residual": 8397.37,
+              "abs_pct_err": 6.25,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 2,
+              "row_id": 39,
+              "actual": 81005.76,
+              "predicted": 84968.87,
+              "residual": -3963.11,
+              "abs_pct_err": 4.89,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 3,
+              "row_id": 30,
+              "actual": 99937.59,
+              "predicted": 103923.34,
+              "residual": -3985.75,
+              "abs_pct_err": 3.99,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 4,
+              "row_id": 45,
+              "actual": 64926.08,
+              "predicted": 48675.32,
+              "residual": 16250.76,
+              "abs_pct_err": 25.03,
+              "is_outlier": true,
+              "status": "Outlier"
+            },
+            {
+              "test_id": 5,
+              "row_id": 17,
+              "actual": 125370.37,
+              "predicted": 127281.4,
+              "residual": -1911.03,
+              "abs_pct_err": 1.52,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 6,
+              "row_id": 48,
+              "actual": 35673.41,
+              "predicted": 55251.25,
+              "residual": -19577.84,
+              "abs_pct_err": 54.88,
+              "is_outlier": true,
+              "status": "Outlier"
+            },
+            {
+              "test_id": 7,
+              "row_id": 26,
+              "actual": 105733.54,
+              "predicted": 112658.68,
+              "residual": -6925.14,
+              "abs_pct_err": 6.55,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 8,
+              "row_id": 25,
+              "actual": 107404.34,
+              "predicted": 101995.55,
+              "residual": 5408.79,
+              "abs_pct_err": 5.04,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 9,
+              "row_id": 32,
+              "actual": 97427.84,
+              "predicted": 101909.24,
+              "residual": -4481.4,
+              "abs_pct_err": 4.6,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 10,
+              "row_id": 19,
+              "actual": 122776.86,
+              "predicted": 119378.43,
+              "residual": 3398.43,
+              "abs_pct_err": 2.77,
+              "is_outlier": false,
+              "status": "Normal"
+            }
+          ]
+        },
+        {
+          "k": 4,
+          "subset": [
+            "R&D Spend",
+            "Administration",
+            "Marketing Spend",
+            "State_Florida"
+          ],
+          "rmse": 8178.37,
+          "mse": 66885735.86,
+          "r2": 0.9174,
+          "adj_r2": 0.908,
+          "mae": 6961.49,
+          "equation": "Profit = $54,029.89 + 0.8056 × (R&D Spend) - 0.0688 × (Administration) + 0.0299 × (Marketing Spend) + 935.0793 × (State_Florida)",
+          "beta_vector": [
+            54029.88591914203,
+            0.805632821897768,
+            -0.06878374611887901,
+            0.029859723516622718,
+            935.079335630108
+          ],
+          "coefficients": [
+            {
+              "predictor": "Intercept",
+              "beta": 54029.88591914203,
+              "std_error": 8274.043243900032,
+              "t_stat": 6.530046354178182,
+              "p_val": 1.5570611311410687e-07,
+              "ci_lower": 37232.68513101438,
+              "ci_upper": 70827.08670726967,
+              "vif": 1.0,
+              "significance": "***"
+            },
+            {
+              "predictor": "R&D Spend",
+              "beta": 0.805632821897768,
+              "std_error": 0.05159556253330141,
+              "t_stat": 15.61438198057802,
+              "p_val": 0.0,
+              "ci_lower": 0.7008882613363765,
+              "ci_upper": 0.9103773824591594,
+              "vif": 2.614956161907153,
+              "significance": "***"
+            },
+            {
+              "predictor": "Administration",
+              "beta": -0.06878374611887901,
+              "std_error": 0.05982042635401878,
+              "t_stat": -1.1498371093481528,
+              "p_val": 0.25800739924950133,
+              "ci_lower": -0.1902256679314883,
+              "ci_upper": 0.05265817569373027,
+              "vif": 1.154855687546819,
+              "significance": "ns"
+            },
+            {
+              "predictor": "Marketing Spend",
+              "beta": 0.029859723516622718,
+              "std_error": 0.021731713815581283,
+              "t_stat": 1.3740160472393939,
+              "p_val": 0.1781727647326794,
+              "ci_lower": -0.014258000994856353,
+              "ci_upper": 0.07397744802810179,
+              "vif": 2.667898335816746,
+              "significance": "ns"
+            },
+            {
+              "predictor": "State_Florida",
+              "beta": 935.079335630108,
+              "std_error": 3254.2109708194316,
+              "t_stat": 0.2873444112920094,
+              "p_val": 0.77554308973357,
+              "ci_lower": -5671.320156429665,
+              "ci_upper": 7541.478827689882,
+              "vif": 1.057991466776138,
+              "significance": "ns"
+            }
+          ],
+          "residuals": [
+            {
+              "test_id": 1,
+              "row_id": 13,
+              "actual": 134307.35,
+              "predicted": 126366.62,
+              "residual": 7940.73,
+              "abs_pct_err": 5.91,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 2,
+              "row_id": 39,
+              "actual": 81005.76,
+              "predicted": 84611.5,
+              "residual": -3605.74,
+              "abs_pct_err": 4.45,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 3,
+              "row_id": 30,
+              "actual": 99937.59,
+              "predicted": 99676.67,
+              "residual": 260.92,
+              "abs_pct_err": 0.26,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 4,
+              "row_id": 45,
+              "actual": 64926.08,
+              "predicted": 46352.84,
+              "residual": 18573.24,
+              "abs_pct_err": 28.61,
+              "is_outlier": true,
+              "status": "Outlier"
+            },
+            {
+              "test_id": 5,
+              "row_id": 17,
+              "actual": 125370.37,
+              "predicted": 128747.41,
+              "residual": -3377.04,
+              "abs_pct_err": 2.69,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 6,
+              "row_id": 48,
+              "actual": 35673.41,
+              "predicted": 50907.49,
+              "residual": -15234.08,
+              "abs_pct_err": 42.7,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 7,
+              "row_id": 26,
+              "actual": 105733.54,
+              "predicted": 109740.86,
+              "residual": -4007.32,
+              "abs_pct_err": 3.79,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 8,
+              "row_id": 25,
+              "actual": 107404.34,
+              "predicted": 100646.44,
+              "residual": 6757.9,
+              "abs_pct_err": 6.29,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 9,
+              "row_id": 32,
+              "actual": 97427.84,
+              "predicted": 97602.03,
+              "residual": -174.19,
+              "abs_pct_err": 0.18,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 10,
+              "row_id": 19,
+              "actual": 122776.86,
+              "predicted": 113093.16,
+              "residual": 9683.7,
+              "abs_pct_err": 7.89,
+              "is_outlier": false,
+              "status": "Normal"
+            }
+          ]
+        },
+        {
+          "k": 5,
+          "subset": [
+            "R&D Spend",
+            "Administration",
+            "Marketing Spend",
+            "State_Florida",
+            "State_New York"
+          ],
+          "rmse": 9137.99,
+          "mse": 83502861.24,
+          "r2": 0.9347,
+          "adj_r2": 0.9251,
+          "mae": 6961.48,
+          "equation": "Profit = $54,028.04 + 0.8056 × (R&D Spend) - 0.0688 × (Administration) + 0.0299 × (Marketing Spend) + 938.7930 × (State_Florida) + 6.9878 × (State_New York)",
+          "beta_vector": [
+            54028.039594058704,
+            0.8056300637569415,
+            -0.06878788228413198,
+            0.02985544291038674,
+            938.7930061484234,
+            6.987759966985652
+          ],
+          "coefficients": [
+            {
+              "predictor": "Intercept",
+              "beta": 54028.039594058704,
+              "std_error": 8457.293260974295,
+              "t_stat": 6.388337015977448,
+              "p_val": 2.7088902365690615e-07,
+              "ci_lower": 36840.751800753955,
+              "ci_upper": 71215.32738736345,
+              "vif": 1.0,
+              "significance": "***"
+            },
+            {
+              "predictor": "R&D Spend",
+              "beta": 0.8056300637569415,
+              "std_error": 0.0523712487634118,
+              "t_stat": 15.383060033500287,
+              "p_val": 0.0,
+              "ci_lower": 0.6991988810113855,
+              "ci_upper": 0.9120612465024974,
+              "vif": 2.6171974116238235,
+              "significance": "***"
+            },
+            {
+              "predictor": "Administration",
+              "beta": -0.06878788228413198,
+              "std_error": 0.06073725885729177,
+              "t_stat": -1.1325483497000737,
+              "p_val": 0.26532799260438655,
+              "ci_lower": -0.19222084310787213,
+              "ci_upper": 0.05464507853960816,
+              "vif": 1.1565116160578504,
+              "significance": "ns"
+            },
+            {
+              "predictor": "Marketing Spend",
+              "beta": 0.02985544291038674,
+              "std_error": 0.02217690135536517,
+              "t_stat": 1.34624050637101,
+              "p_val": 0.18713248451717002,
+              "ci_lower": -0.015213443102734786,
+              "ci_upper": 0.07492432892350827,
+              "vif": 2.698944569752321,
+              "significance": "ns"
+            },
+            {
+              "predictor": "State_Florida",
+              "beta": 938.7930061484234,
+              "std_error": 3893.5108845973637,
+              "t_stat": 0.2411173447240808,
+              "p_val": 0.8109123470728932,
+              "ci_lower": -6973.7731110433415,
+              "ci_upper": 8851.359123340188,
+              "vif": 1.4712431557726304,
+              "significance": "ns"
+            },
+            {
+              "predictor": "State_New York",
+              "beta": 6.987759966985652,
+              "std_error": 3882.7648770093274,
+              "t_stat": 0.0017996866120742097,
+              "p_val": 0.9985745767960659,
+              "ci_lower": -7883.739842306905,
+              "ci_upper": 7897.715362240876,
+              "vif": 1.410878407198013,
+              "significance": "ns"
+            }
+          ],
+          "residuals": [
+            {
+              "test_id": 1,
+              "row_id": 13,
+              "actual": 134307.35,
+              "predicted": 126362.88,
+              "residual": 7944.47,
+              "abs_pct_err": 5.92,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 2,
+              "row_id": 39,
+              "actual": 81005.76,
+              "predicted": 84608.45,
+              "residual": -3602.69,
+              "abs_pct_err": 4.45,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 3,
+              "row_id": 30,
+              "actual": 99937.59,
+              "predicted": 99677.49,
+              "residual": 260.1,
+              "abs_pct_err": 0.26,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 4,
+              "row_id": 45,
+              "actual": 64926.08,
+              "predicted": 46357.46,
+              "residual": 18568.62,
+              "abs_pct_err": 28.6,
+              "is_outlier": true,
+              "status": "Outlier"
+            },
+            {
+              "test_id": 5,
+              "row_id": 17,
+              "actual": 125370.37,
+              "predicted": 128750.48,
+              "residual": -3380.11,
+              "abs_pct_err": 2.7,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 6,
+              "row_id": 48,
+              "actual": 35673.41,
+              "predicted": 50912.42,
+              "residual": -15239.01,
+              "abs_pct_err": 42.72,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 7,
+              "row_id": 26,
+              "actual": 105733.54,
+              "predicted": 109741.35,
+              "residual": -4007.81,
+              "abs_pct_err": 3.79,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 8,
+              "row_id": 25,
+              "actual": 107404.34,
+              "predicted": 100643.24,
+              "residual": 6761.1,
+              "abs_pct_err": 6.29,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 9,
+              "row_id": 32,
+              "actual": 97427.84,
+              "predicted": 97599.28,
+              "residual": -171.44,
+              "abs_pct_err": 0.18,
+              "is_outlier": false,
+              "status": "Normal"
+            },
+            {
+              "test_id": 10,
+              "row_id": 19,
+              "actual": 122776.86,
+              "predicted": 113097.43,
+              "residual": 9679.43,
+              "abs_pct_err": 7.88,
+              "is_outlier": false,
+              "status": "Normal"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
