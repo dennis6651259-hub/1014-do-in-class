@@ -788,23 +788,23 @@ const ALGO_COLORS = {
 };
 
 async function init() {
-  // Try fetching from Flask REST API, otherwise use static window.MODEL_DATA
+  if (window.MODEL_DATA) {
+    modelDB = window.MODEL_DATA;
+    render();
+    runPrediction();
+  }
+
   try {
-    const res = await fetch('/api/models');
+    const res = await fetch('./api/models');
     if (res.ok) {
       const models = await res.json();
       modelDB = { models };
+      render();
+      runPrediction();
     }
   } catch (err) {
-    console.log('Using static model_data asset fallback:', err);
+    // Static GitHub Pages environment fallback
   }
-
-  if (!modelDB && window.MODEL_DATA) {
-    modelDB = window.MODEL_DATA;
-  }
-
-  render();
-  runPrediction();
 }
 
 function setAlgorithm(algo) {
